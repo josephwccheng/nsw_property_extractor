@@ -1,0 +1,7 @@
+env
+data
+test
+.vscode
+__pycache__/
+.mypy_cache
+output
