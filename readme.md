@@ -7,7 +7,7 @@
 **Programming Language**: Python3.8 and above
 
 ## Disclaimer
-- This is a personal, non-profit project that is intended for the public to access datasets, which can potentially help people make decisions when analysing on the property market
+- This is a personal, non-profit project that is intended for the public to access datasets, which can potentially help people make decisions when analysing on the property market.
 - If the owner / government of this data source requires me to take down this project I will take it down immediately.
 
 ## Main Objective
