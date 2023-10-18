@@ -1,0 +1,15 @@
+{
+  "name": "domain_scrapper",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "domain scrapper to parse dynamic javascript content",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^21.3.8"
+  }
+}

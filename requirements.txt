@@ -1,2 +1,6 @@
 tqdm
 multiprocessing
+requests
+bs4
+lxml
+types-requests
