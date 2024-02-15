@@ -35,7 +35,7 @@ PropertyListingResp: TypeAlias = object
 
 def loadNSWPostcodes():
     nswPostcodes = {}
-    with open("./domain/nsw_postcode.csv", "r") as file:
+    with open("./domain_python/nsw_postcode.csv", "r") as file:
         reader = csv.DictReader(file)
         for row in reader:
             locality = str(row['locality']).lower()
@@ -54,7 +54,7 @@ class DomainAdaptor:
     Note: postcode search: https://www.domain.com.au/sale/?postcode=2150&excludeunderoffer=1
     '''
 
-    def getSalesListingBySuburb(self, suburb: str = "parramatta", salesFilter: SalesFilter = SalesFilter(price="")) -> SalesListingResp:
+    def getSalesListingBySuburb(self, suburb: str = "parramatta", salesFilter: SalesFilter = SalesFilter(price="")):
         formattedSuburb = self.suburbFormatter(suburb)
         response = requests.get(baseURL + "sale/" + formattedSuburb +
                                 '/?excludeunderoffer=1&sort=dateupdated-desc', headers=headers)

@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jsdom": "^22.1.0",
     "puppeteer": "^21.3.8"
   }
 }

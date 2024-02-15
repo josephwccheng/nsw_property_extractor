@@ -1,6 +1,6 @@
 from domainAdaptor import DomainAdaptor
 from domainSalesListing import SalesListing
-
+from bs4 import BeautifulSoup
 
 if __name__ == "__main__":
     inputSuburb = "PARRAMATTA".lower()
