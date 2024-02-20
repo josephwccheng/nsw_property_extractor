@@ -1,0 +1,2056 @@
+{
+  "props": {
+    "pageProps": {
+      "layoutProps": {
+        "title": "17/18 Sorrell Street, Parramatta NSW 2150 | Domain",
+        "description": "2 bedroom apartment for Sale at 17/18 Sorrell Street, Parramatta NSW 2150. View property photos, floor plans, local school catchments & lots more on Domain.com.au. 2019063146",
+        "canonical": "https://www.domain.com.au/17-18-sorrell-street-parramatta-nsw-2150-2019063146",
+        "metatags": [
+          {
+            "component": "meta",
+            "property": "og:title",
+            "content": "17/18 Sorrell Street, Parramatta NSW 2150 | Domain"
+          },
+          {
+            "component": "meta",
+            "property": "og:description",
+            "content": "2 bedroom apartment for Sale at 17/18 Sorrell Street, Parramatta NSW 2150. View property photos, floor plans, local school catchments & lots more on Domain.com.au. 2019063146"
+          },
+          {
+            "component": "meta",
+            "property": "og:type",
+            "content": "product"
+          },
+          {
+            "component": "meta",
+            "property": "og:site_name",
+            "content": "Domain"
+          },
+          {
+            "component": "meta",
+            "property": "og:url",
+            "content": "https://www.domain.com.au/17-18-sorrell-street-parramatta-nsw-2150-2019063146"
+          },
+          {
+            "component": "meta",
+            "property": "og:image",
+            "content": "https://bucket-api.domain.com.au/v1/bucket/image/2019063146_1_1_240219_070518-w1600-h1067"
+          },
+          {
+            "component": "meta",
+            "property": "fb:app_id",
+            "content": "505328276158724"
+          },
+          {
+            "component": "meta",
+            "property": "al:ios:url",
+            "content": "domain.com.au://propertyDetails/2019063146"
+          },
+          {
+            "component": "meta",
+            "property": "al:ios:app_store_id",
+            "content": "319908646"
+          },
+          {
+            "component": "meta",
+            "property": "al:ios:app_name",
+            "content": "Domain Real Estate and Property"
+          },
+          {
+            "component": "meta",
+            "property": "al:android:url",
+            "content": "domain://listing/2019063146"
+          },
+          {
+            "component": "meta",
+            "property": "al:android:package",
+            "content": "com.fairfax.domain"
+          },
+          {
+            "component": "meta",
+            "property": "al:android:app_name",
+            "content": "Domain"
+          },
+          {
+            "component": "meta",
+            "name": "twitter:card",
+            "content": "gallery"
+          },
+          {
+            "component": "meta",
+            "name": "twitter:site",
+            "content": "@Domaincomau"
+          },
+          {
+            "component": "meta",
+            "name": "twitter:title",
+            "content": "17/18 Sorrell Street, Parramatta NSW 2150 | Domain"
+          },
+          {
+            "component": "meta",
+            "name": "twitter:description",
+            "content": "2 bedroom apartment for Sale at 17/18 Sorrell Street, Parramatta NSW 2150. View property photos, floor plans, local school catchments & lots more on Domain.com.au. 2019063146"
+          },
+          {
+            "component": "meta",
+            "name": "twitter:image0",
+            "content": "https://bucket-api.domain.com.au/v1/bucket/image/2019063146_1_1_240219_070518-w1600-h1067"
+          },
+          {
+            "component": "meta",
+            "name": "twitter:image1",
+            "content": "https://bucket-api.domain.com.au/v1/bucket/image/2019063146_2_1_240219_070518-w1600-h1067"
+          },
+          {
+            "component": "meta",
+            "name": "twitter:image2",
+            "content": "https://bucket-api.domain.com.au/v1/bucket/image/2019063146_3_1_240219_070518-w1600-h1067"
+          },
+          {
+            "component": "meta",
+            "name": "twitter:image3",
+            "content": "https://bucket-api.domain.com.au/v1/bucket/image/2019063146_4_1_240219_070518-w1600-h1067"
+          },
+          {
+            "component": "link",
+            "rel": "alternate",
+            "href": "android-app://com.fairfax.domain/https/www.domain.com.au/17-18-sorrell-street-parramatta-nsw-2150-2019063146"
+          },
+          {
+            "component": "link",
+            "rel": "alternate",
+            "href": "ios-app://319908646/domain.com.au/domainapp"
+          },
+          {
+            "component": "meta",
+            "name": "product-type",
+            "content": "premiumPlus"
+          }
+        ],
+        "isArchived": false,
+        "disableAds": false,
+        "disableTracking": false,
+        "isFromEu": false,
+        "disableOptimize": false,
+        "digitalData": {
+          "page": {
+            "pageInfo": {
+              "agencyId": 28362,
+              "author": 28362,
+              "pageId": 2019063146,
+              "pageName": "property details - buy - 2019063146 - 17/18 sorrell street parramatta nsw 2150",
+              "effectiveDate": "2024-02-19T18:05:18.243",
+              "issueDate": "2024-02-19T18:05:18.243",
+              "property": {
+                "saleMethod": "privateTreaty",
+                "address": "17/18 Sorrell Street, Parramatta NSW 2150",
+                "adtype": "premiumPlus",
+                "agency": "LIV REALTY PTY LTD",
+                "agencyId": 28362,
+                "agentNames": "James Way, Frankie Gonzaga",
+                "bathrooms": 2,
+                "bedrooms": 2,
+                "daysListed": 0,
+                "dateListed": "2024-02-19T18:05:18",
+                "inspectionsCount": 2,
+                "hasPhoto": true,
+                "hasFloorplan": true,
+                "hasDisplayPrice": true,
+                "hasDescription": true,
+                "descriptionHasEmail": false,
+                "descriptionHasPhone": true,
+                "hasSOI": false,
+                "virtualTour": true,
+                "floorPlansCount": 1,
+                "images": [
+                  "https://bucket-api.domain.com.au/v1/bucket/image/2019063146_1_1_240219_070518-w1600-h1067",
+                  "https://bucket-api.domain.com.au/v1/bucket/image/2019063146_2_1_240219_070518-w1600-h1067",
+                  "https://bucket-api.domain.com.au/v1/bucket/image/2019063146_3_1_240219_070518-w1600-h1067",
+                  "https://bucket-api.domain.com.au/v1/bucket/image/2019063146_4_1_240219_070518-w1600-h1067",
+                  "https://bucket-api.domain.com.au/v1/bucket/image/2019063146_5_1_240219_070518-w1600-h1067",
+                  "https://bucket-api.domain.com.au/v1/bucket/image/2019063146_6_1_240219_070518-w1600-h1067"
+                ],
+                "onlineAuctionAvailable": "None",
+                "parking": 1,
+                "photoCount": 6,
+                "postcode": "2150",
+                "price": "JUST LISTED!",
+                "primaryPropertyType": "Apartment",
+                "propertyFeatures": "Ensuite",
+                "structuredFeatures": [
+                  {
+                    "name": "Ensuite",
+                    "category": "Indoor",
+                    "source": "advertiser"
+                  }
+                ],
+                "propertyId": "NV-8242-JV",
+                "secondaryPropertyType": "Apartment / Unit / Flat",
+                "state": "NSW",
+                "suburb": "Parramatta",
+                "videoCount": 0,
+                "x-message": "domain-propertyinfo"
+              },
+              "suburbId": 35042,
+              "isEmbeddedApp": false,
+              "source": "Unknown",
+              "nbnDetails": "FTTB",
+              "brand": "domain",
+              "generator": "DO",
+              "sysEnv": "responsive"
+            },
+            "category": {
+              "primaryCategory": "Buy",
+              "subCategory1": "Property Details",
+              "pageType": "Listing"
+            },
+            "optimize": {
+              "shortlistExperimentFlag": true
+            }
+          },
+          "titan": {
+            "adZone": "buy/details",
+            "contentWidth": "",
+            "adKeyValues": {
+              "cat": "buy",
+              "cat1": "details",
+              "ctype": "listing",
+              "e": "www.domain.com.au",
+              "locstate": "nsw",
+              "locarea": ["parramatta"],
+              "locsuburb": ["parramatta"],
+              "locpostcode": ["2150"],
+              "pageId": 2019063146,
+              "pageName": "property details - buy - 2019063146 - 17/18 sorrell street parramatta nsw 2150",
+              "address": "17/18 Sorrell Street, Parramatta NSW 2150",
+              "usertype": "buy",
+              "medianPrice": "620K",
+              "proptypes": ["apartment_unit_flat"],
+              "bedrooms": 2
+            },
+            "adSite": "DOMAIN.COM.AU",
+            "adSlots": []
+          },
+          "adLoader": "prebid",
+          "version": "1.0",
+          "events": [],
+          "user": {
+            "membershipType": "visitor",
+            "sessionToken": "e154772f-a8ba-4ce3-8bb6-b2976125ff1c",
+            "membershipState": "Not_logged_in",
+            "dhlMembership": "inactive",
+            "ipAddress": "3Uuww4T14lmzyA+zuNFQE2oAnCZWW18dTfTxtzVI/y/ThE9q001jZCleVM+MEFza"
+          }
+        },
+        "serverSideExperiments": {
+          "enableShortlistPhotoGallery": {
+            "type": "percentageUser",
+            "value": 1,
+            "optimizeCode": "shortlist-photo-gallery.1"
+          },
+          "enableShortlistNotesEditing": {
+            "type": "percentageUser",
+            "value": 0,
+            "optimizeCode": "enableShortlistNotesEditing.0"
+          },
+          "enableUPVExperiment": {
+            "type": "percentageUser",
+            "value": 1,
+            "optimizeCode": "enableUPVExperiment.1"
+          },
+          "enableFixedRateDriver": {
+            "type": "percentageUser",
+            "value": 1,
+            "optimizeCode": "enableFixedRateDriver.1"
+          },
+          "enableFixedRateLendiAPI": {
+            "type": "percentageUser",
+            "value": 1,
+            "optimizeCode": "enableFixedRateLendiAPI.1"
+          }
+        },
+        "jsonLdItems": [
+          {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Domain",
+            "url": "https://www.domain.com.au",
+            "sameAs": [
+              "https://www.facebook.com/domain.com.au",
+              "https://twitter.com/domaincomau",
+              "https://plus.google.com/+domaincomau",
+              "https://www.linkedin.com/company/domain-com-au"
+            ]
+          },
+          {
+            "@context": "http://schema.org",
+            "@type": "Residence",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "17/18 Sorrell Street",
+              "addressLocality": "Parramatta",
+              "addressRegion": "NSW",
+              "postalCode": "2150"
+            }
+          },
+          {
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": "https://www.domain.com.au/sale/",
+                  "name": "Sale"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": "https://www.domain.com.au/sale/nsw/",
+                  "name": "NSW"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@id": "https://www.domain.com.au/sale/parramatta-nsw-2150/",
+                  "name": "Parramatta"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@id": "https://www.domain.com.au/sale/parramatta-nsw-2150/apartment-unit-flat/",
+                  "name": "Apartments"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                  "@id": "https://www.domain.com.au/sale/parramatta-nsw-2150/apartment-unit-flat/2-bedrooms/",
+                  "name": "2-Bedrooms"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "item": {
+                  "@id": "https://www.domain.com.au/17-18-sorrell-street-parramatta-nsw-2150-2019063146",
+                  "name": "17/18 Sorrell Street, Parramatta NSW 2150"
+                }
+              }
+            ]
+          },
+          {
+            "@context": "http://schema.org",
+            "@type": "Event",
+            "location": {
+              "@type": "Residence",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -33.8096389,
+                "longitude": 151.0077424
+              },
+              "name": "17/18 Sorrell Street, Parramatta NSW 2150",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Parramatta",
+                "addressRegion": "NSW",
+                "postalCode": "2150",
+                "streetAddress": "17/18 Sorrell Street"
+              }
+            },
+            "name": "Inspection",
+            "description": "Inspect 17/18 Sorrell Street",
+            "url": "https://www.domain.com.au/17-18-sorrell-street-parramatta-nsw-2150-2019063146",
+            "image": "https://bucket-api.domain.com.au/v1/bucket/image/2019063146_1_1_240219_070518-w1600-h1067",
+            "startDate": "2024-02-22T17:00:00",
+            "endDate": "2024-02-22T17:30:00"
+          },
+          {
+            "@context": "http://schema.org",
+            "@type": "Event",
+            "location": {
+              "@type": "Residence",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -33.8096389,
+                "longitude": 151.0077424
+              },
+              "name": "17/18 Sorrell Street, Parramatta NSW 2150",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Parramatta",
+                "addressRegion": "NSW",
+                "postalCode": "2150",
+                "streetAddress": "17/18 Sorrell Street"
+              }
+            },
+            "name": "Inspection",
+            "description": "Inspect 17/18 Sorrell Street",
+            "url": "https://www.domain.com.au/17-18-sorrell-street-parramatta-nsw-2150-2019063146",
+            "image": "https://bucket-api.domain.com.au/v1/bucket/image/2019063146_1_1_240219_070518-w1600-h1067",
+            "startDate": "2024-02-24T10:15:00",
+            "endDate": "2024-02-24T10:45:00"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How many bedrooms does 17/18 Sorrell Street, Parramatta have?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "17/18 Sorrell Street, Parramatta is a 2 bedroom apartment."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the key property features of 17/18 Sorrell Street, Parramatta?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Explore all key property features for 17/18 Sorrell Street, Parramatta. <a href=\"#property-features\">Click here to find out more.</a>"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the size of the property at 17/18 Sorrell Street, Parramatta?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The property size for 17/18 Sorrell Street, Parramatta has not been disclosed. To find detailed information on property size, <a href=\"#enquiry-form\">contact the agent.</a>"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How many car spaces does 17/18 Sorrell Street, Parramatta have?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "17/18 Sorrell Street, Parramatta has 1 car space."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the listing price for 17/18 Sorrell Street, Parramatta?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "LIV REALTY PTY LTD has not listed a sale price for 17/18 Sorrell Street, Parramatta. <a href=\"#enquiry-form\">Contact the agent for a price guide.</a>"
+                }
+              }
+            ]
+          }
+        ],
+        "raygunTags": ["isListingDetails", "isResidentialListingDetails"],
+        "featureFlags": {
+          "enableContentSnippet": false,
+          "enableContentSnippetWithPostcodes": false,
+          "disableAdsFlag": false,
+          "enableEnquiryCustomisations": false,
+          "shortlistExperimentFlag": true,
+          "enableSuggestedFeatures": true,
+          "enableAdditionalDescriptionFeature": true,
+          "enableVerticalGallery": true,
+          "enableRetirements": true,
+          "enableListingFeedback": true,
+          "enablePropertyNextSteps": true,
+          "enablePropertyNextStepsBackend": true,
+          "enableAddNotes": false,
+          "textAdsEnabled": true,
+          "enableMobileBannerAppDriver": false,
+          "enableCustomSort": true,
+          "enableMRECAd": false,
+          "enableVectorGoogleMaps": false,
+          "enableBranch": true,
+          "googleOneTap": true,
+          "schoolSearchMapView": true,
+          "enablePropertyAlertPaginationCTA": false,
+          "enableIndependentOne": false,
+          "enableIndependentTwo": true,
+          "enableIndependentThree": false,
+          "enableEarlyAccessOnboarding": true,
+          "enableHomePagePropertyAlert": true,
+          "enableShortlistPhotoGallery": true,
+          "enableChildcare": true,
+          "enablePropertyAlertOverlay": true,
+          "enableShortlistNotesEditing": false,
+          "enableShortlistNotesEditingMobile": false,
+          "dlfFunnelEnableNewLiabilities": false,
+          "enableShortlistSignupDriverMl": true,
+          "enableShortlistSignupDriverSimple": false,
+          "enableHomepageSchoolFirstTypeahead": false,
+          "enableGraphQLSuggestLocations": true,
+          "enableEnquiryFormSafetyTips": true,
+          "shareShortlistBranchExperiment": false,
+          "enableNewDevelopmentEnquiryForm": false,
+          "enableTypeaheadSchoolMessage": false,
+          "enableSuggestSuburbNewPill": false,
+          "enableEnquiryRecaptcha": false,
+          "isNewProjectTemplate": true,
+          "enableBuyerTypeExperiment": false,
+          "enableBuyerTypeExperimentStarted": false,
+          "enableNewProjectFaqs": true,
+          "mobileWebThirdPartyRentalButton": true,
+          "enableUPVExperiment": true,
+          "enableNewProjectListingViewMore": false,
+          "dlfFunnelBatchAnswers": true,
+          "newDevsDiscoveryOptimisation": true,
+          "enableRequestFloorPlanForChildListing": true,
+          "enableSearchDisplayPriceRange": false,
+          "enableGraphQLSearch": false,
+          "newDevsDiscoveryPopup": false,
+          "enableNBNConnection": true,
+          "enableGraphQLSavedSearch": false,
+          "enableFixedRateDriver": true,
+          "enableFixedRateLendiAPI": true,
+          "topspotGQL": false,
+          "adsRecoveryPopup": true,
+          "enableStaticGoogleMap": true,
+          "enableBYBTextlink": false,
+          "enableBrandRefreshMapPins": true,
+          "enableLandSizeSlider": true,
+          "enableGA4Tracking": false,
+          "enableBankAdsOnListings": false,
+          "enableGQLOnListingsPage": false,
+          "immediateEmailNotifications": false,
+          "enquiryLabelExperiment": false,
+          "postInspectionAd": false,
+          "postEnquiryAd": false,
+          "stickyAgentCard": false,
+          "startBuyerTypeExperiment": false
+        },
+        "heroImages": [
+          "https://rimh2.domainstatic.com.au/lq7RHrPVtq-pdKxq1AUgey90ph4=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2019063146_1_1_240219_070518-w1600-h1067",
+          "https://rimh2.domainstatic.com.au/3NXw3TR9fnoFF3RqV7ybD08_Aic=/fit-in/1020x1020/filters:format(jpeg):quality(80):no_upscale()/2019063146_1_1_240219_070518-w1600-h1067",
+          "https://rimh2.domainstatic.com.au/0BR0fGaHCbBCy7CY7G-GY8fCXXI=/fit-in/600x800/filters:format(jpeg):quality(80):no_upscale()/2019063146_1_1_240219_070518-w1600-h1067"
+        ]
+      },
+      "componentProps": {
+        "user": null,
+        "loginAndReturnUrl": "https://www.domain.com.au/authentications/login?ReturnUrl=%2F17-18-sorrell-street-parramatta-nsw-2150-2019063146",
+        "signupAndReturnUrl": "https://www.domain.com.au/authentications/signup?ReturnUrl=%2F17-18-sorrell-street-parramatta-nsw-2150-2019063146",
+        "notificationApiUrl": "https://www.domain.com.au/sls-widgets-api",
+        "listingsMap": {
+          "2016543427": {
+            "listingType": "residential",
+            "listingModel": {
+              "promoLevel": "standardpp",
+              "promoType": "standardpp",
+              "price": "$510,000-$530,000",
+              "features": {
+                "beds": 2,
+                "baths": 1,
+                "parking": 1,
+                "propertyType": "ApartmentUnitFlat",
+                "propertyTypeFormatted": "Apartment / Unit / Flat",
+                "isRural": false,
+                "landSize": 0,
+                "landUnit": "m²",
+                "isRetirement": false
+              },
+              "images": [
+                "https://rimh2.domainstatic.com.au/63IGKT9hG5nT-xDDSBRmawQh7ks=/305x208/filters:format(jpeg):quality(80):no_upscale()/2016543427_1_1_230530_121347-w1600-h1067"
+              ],
+              "address": {
+                "street": "21/23-25 Campbell",
+                "suburb": "Parramatta"
+              },
+              "landSize": 0,
+              "url": "https://domain.com.au/21-23-25-campbell-parramatta-nsw-2150-2016543427",
+              "additionalFeatures": []
+            },
+            "domainWebsiteUrl": "",
+            "id": 2016543427,
+            "propertyType": "ApartmentUnitFlat"
+          },
+          "2018459522": {
+            "listingType": "residential",
+            "listingModel": {
+              "promoLevel": "standardpp",
+              "promoType": "standardpp",
+              "price": "$385,000 - $410,000",
+              "features": {
+                "beds": 1,
+                "baths": 1,
+                "parking": 1,
+                "propertyType": "ApartmentUnitFlat",
+                "propertyTypeFormatted": "Apartment / Unit / Flat",
+                "isRural": false,
+                "landSize": 0,
+                "landUnit": "m²",
+                "isRetirement": false
+              },
+              "images": [
+                "https://rimh2.domainstatic.com.au/Xf1Hxt_1a0Jbrzpzgh7peYE-zmQ=/305x208/filters:format(jpeg):quality(80):no_upscale()/2018459522_1_1_230404_042946-w1024-h682"
+              ],
+              "address": {
+                "street": "4/64 Virginia Street",
+                "suburb": "Rosehill"
+              },
+              "landSize": 0,
+              "url": "https://domain.com.au/4-64-virginia-street-rosehill-nsw-2142-2018459522",
+              "additionalFeatures": []
+            },
+            "domainWebsiteUrl": "",
+            "id": 2018459522,
+            "propertyType": "ApartmentUnitFlat"
+          },
+          "2018489760": {
+            "listingType": "residential",
+            "listingModel": {
+              "promoLevel": "standardpp",
+              "promoType": "standardpp",
+              "price": "$399,000 - $429,000",
+              "features": {
+                "beds": 1,
+                "baths": 1,
+                "parking": 1,
+                "propertyType": "ApartmentUnitFlat",
+                "propertyTypeFormatted": "Apartment / Unit / Flat",
+                "isRural": false,
+                "landSize": 0,
+                "landUnit": "m²",
+                "isRetirement": false
+              },
+              "images": [
+                "https://rimh2.domainstatic.com.au/wFjpGxgFd5e1F2Dk3Uq9jaR8e6A=/305x208/filters:format(jpeg):quality(80):no_upscale()/2015223399_5_1_190501_045123-w2732-h1820"
+              ],
+              "address": {
+                "street": "27/51 Bonnyrigg Ave",
+                "suburb": "Bonnyrigg"
+              },
+              "landSize": 0,
+              "url": "https://domain.com.au/27-51-bonnyrigg-ave-bonnyrigg-nsw-2177-2018489760",
+              "additionalFeatures": []
+            },
+            "domainWebsiteUrl": "",
+            "id": 2018489760,
+            "propertyType": "ApartmentUnitFlat"
+          },
+          "2018666095": {
+            "listingType": "residential",
+            "listingModel": {
+              "promoLevel": "standardpp",
+              "promoType": "standardpp",
+              "price": "Offers Invited",
+              "features": {
+                "beds": 8,
+                "baths": 4,
+                "parking": 10,
+                "propertyType": "AcreageSemiRural",
+                "propertyTypeFormatted": "Acreage / Semi-Rural",
+                "isRural": false,
+                "landSize": 0,
+                "landUnit": "m²",
+                "isRetirement": false
+              },
+              "images": [
+                "https://rimh2.domainstatic.com.au/cMoBUK8eY5DJtdO8qUbrEb-JeU8=/305x208/filters:format(jpeg):quality(80):no_upscale()/2018666095_24_1_230726_054033-w960-h720"
+              ],
+              "address": {
+                "street": "94-100 Lansdowne Road",
+                "suburb": "Orchard Hills"
+              },
+              "landSize": 0,
+              "url": "https://domain.com.au/94-100-lansdowne-road-orchard-hills-nsw-2748-2018666095",
+              "additionalFeatures": []
+            },
+            "domainWebsiteUrl": "",
+            "id": 2018666095,
+            "propertyType": "AcreageSemiRural"
+          },
+          "2019063146": {
+            "id": 2019063146,
+            "listingType": "listing",
+            "listingModel": {
+              "url": "https://www.domain.com.au/17-18-sorrell-street-parramatta-nsw-2150-2019063146",
+              "images": [
+                "https://rimh2.domainstatic.com.au/j9e_CrJwxBQl9SHVkGM3VTnMVB0=/660x440/filters:format(jpeg):quality(80)/2019063146_1_1_240219_070518-w1600-h1067"
+              ],
+              "price": "JUST LISTED!",
+              "address": {
+                "street": "17/18 Sorrell Street",
+                "suburb": "Parramatta",
+                "state": "NSW",
+                "postcode": "2150",
+                "lat": -33.8096389,
+                "lng": 151.0077424
+              },
+              "features": {
+                "beds": 2,
+                "baths": 2,
+                "parking": 1,
+                "propertyType": "apartmentUnitFlat",
+                "propertyTypeFormatted": "Apartment / Unit / Flat",
+                "isRural": false,
+                "landSize": 0,
+                "landUnit": "m²",
+                "isRetirement": false
+              }
+            }
+          }
+        },
+        "otherListingsIds": [2018666095, 2016543427, 2018489760, 2018459522],
+        "address": "17/18 Sorrell Street, Parramatta NSW 2150",
+        "unitNumber": "17",
+        "streetNumber": "18",
+        "street": "Sorrell Street",
+        "suburb": "Parramatta",
+        "postcode": "2150",
+        "stateAbbreviation": "nsw",
+        "projectColor": "",
+        "createdOn": "2024-02-19T18:05:18.243",
+        "modifiedOn": "2024-02-19T18:05:18.243",
+        "projectName": null,
+        "isStandardListing": false,
+        "isArchived": false,
+        "id": 2019063146,
+        "listingId": 2019063146,
+        "listingUrl": "https://www.domain.com.au/17-18-sorrell-street-parramatta-nsw-2150-2019063146",
+        "projectUrl": null,
+        "bigProjectLogo": null,
+        "smallProjectLogo": null,
+        "brandingProjectLogo": null,
+        "brandingProjectColor": null,
+        "footer": {
+          "baseUrl": "https://www.domain.com.au",
+          "suburb": {
+            "name": "Parramatta",
+            "slug": "parramatta-nsw-2150"
+          },
+          "sale": {
+            "semiDetachedHouses": true,
+            "apartmentsAndUnits": true,
+            "studios": true,
+            "houses": true,
+            "townhouses": true,
+            "blockOfUnits": true
+          },
+          "rent": {
+            "studios": true,
+            "townhouses": true,
+            "apartmentsAndUnits": true,
+            "duplexes": true,
+            "houses": true
+          },
+          "surroundingSuburbs": [
+            {
+              "name": "Merrylands",
+              "urlSlug": "merrylands-nsw-2160"
+            },
+            {
+              "name": "Westmead",
+              "urlSlug": "westmead-nsw-2145"
+            },
+            {
+              "name": "Mays Hill",
+              "urlSlug": "mays-hill-nsw-2145"
+            },
+            {
+              "name": "Holroyd",
+              "urlSlug": "holroyd-nsw-2142"
+            },
+            {
+              "name": "Granville",
+              "urlSlug": "granville-nsw-2142"
+            },
+            {
+              "name": "North Parramatta",
+              "urlSlug": "north-parramatta-nsw-2151"
+            },
+            {
+              "name": "Harris Park",
+              "urlSlug": "harris-park-nsw-2150"
+            },
+            {
+              "name": "Oatlands",
+              "urlSlug": "oatlands-nsw-2117"
+            },
+            {
+              "name": "Rosehill",
+              "urlSlug": "rosehill-nsw-2142"
+            },
+            {
+              "name": "Camellia",
+              "urlSlug": "camellia-nsw-2142"
+            },
+            {
+              "name": "Rydalmere",
+              "urlSlug": "rydalmere-nsw-2116"
+            },
+            {
+              "name": "Dundas",
+              "urlSlug": "dundas-nsw-2117"
+            }
+          ]
+        },
+        "propertyType": "Apartment / Unit / Flat",
+        "beds": 2,
+        "phone": "02 4777 0001",
+        "agencyName": "LIV REALTY PTY LTD",
+        "propertyDeveloperName": "LIV REALTY PTY LTD",
+        "agencyLogo": "https://rimh2.domainstatic.com.au/eax1z8BcnAicNz-gemW9xrcf1Og=/200x70/filters:format(jpeg):quality(80):no_upscale()/https://images.domain.com.au/img/Agencys/28362/logo_28362.png?date=638440191430524077",
+        "agencyBanner": "https://rimh2.domainstatic.com.au/4Y_cBJcoBqfpmSBit2IY-dnyO3w=/624x42/filters:format(jpeg):quality(80):no_upscale()/https://images.domain.com.au/img/Agencys/28362/banner_28362.png?date=638440191430524053",
+        "agencyProfileUrl": "https://www.domain.com.au/real-estate-agencies/livrealtyptyltd-28362/",
+        "propertyDeveloperUrl": "https://www.domain.com.au/real-estate-agencies/livrealtyptyltd-28362/",
+        "projectLink": "http://www.livrealty.com",
+        "websiteLink": "",
+        "brandingColor": "#000000",
+        "brandingAppearance": "dark",
+        "limitedAgencyMode": false,
+        "listingType": "residential",
+        "description": [
+          "Nestled in the vibrant heart of Parramatta CBD, mere meters from the tranquil river, this exquisite 2-bedroom, 2-bathroom apartment offers a perfect blend of modern comfort and urban convenience.",
+          "",
+          "As you step inside, you're greeted by a spacious and inviting atmosphere, highlighted by a generously sized covered balcony offering a peaceful retreat amidst the bustling cityscape. The apartment boasts a thoughtfully designed layout, featuring a well-appointed kitchen with ample storage and preparation space. The combined living and dining area seamlessly flow together, providing a versatile space for relaxation and entertainment.",
+          "",
+          "Both bedrooms have built in wardrobes with the master also having an ensuite, allowing you to retreat into your sanctuary after a big day enjoying all Parramatta has to offer. Positioned minutes away from cafes, schools, dining and nightlife. Experience the ease of city life with close proximity to the train station, ferry wharf and the new light rail just down the end of the street!",
+          "",
+          "Property Features:",
+          "• 2 bedrooms both with built in wardrobes",
+          "• Main bathroom with a bath and ensuite off master bedroom",
+          "• Spacious living and dining area",
+          "• Internal laundry",
+          "• Covered balcony",
+          "• Aircon",
+          "• Secure complex",
+          "• Secure reserved parking",
+          "• Communal pool",
+          "",
+          "Please contact James on 0416 910 340 or Frankie on 0450 680 808 with any questions or for a private inspection."
+        ],
+        "fetchUrl": "https://www.domain.com.au",
+        "headline": "Prime Position In The Heart Of Parramatta!",
+        "tagline": "",
+        "banner": null,
+        "loanfinder": {
+          "homeLoansApiUrl": "https://home-loans-api.domainloanfinder.com.au",
+          "configName": "dhl-domain-web",
+          "calculators": [
+            {
+              "name": "repayments",
+              "propertyPrice": "620000",
+              "priceSource": "median",
+              "ingressApi": "https://www.domain.com.au/transactions-users-ingress-api/v1/dlf",
+              "usersApi": "https://www.domain.com.au/transactions-users-api/v1/users/loan-tools/repayments",
+              "loanTerm": "30",
+              "formActionUrl": "https://www.domain.com.au/loanfinder/basics/new-home?ltm_source=domain&ltm_medium=referral&ltm_campaign=domain_r_calculator_buy-listing_web&ltm_content=newloan_compare-home-loans",
+              "displayLogo": false,
+              "submitText": "Compare Home Loans",
+              "queryParams": {
+                "ltm_source": "domain",
+                "ltm_medium": "referral",
+                "ltm_campaign": "domain_r_calculator_buy-listing_web",
+                "ltm_content": "newloan_compare-home-loans"
+              },
+              "experimentName": "buy_listing_page_calculator_repayments",
+              "groupStats": {
+                "listingId": "2019063146",
+                "deviceType": "desktop"
+              },
+              "hasDeviceSessionId": true
+            },
+            {
+              "name": "upfront-costs",
+              "propertyPrice": "620000",
+              "ingressApi": "https://www.domain.com.au/transactions-users-ingress-api/v1/dlf",
+              "usersApi": "https://www.domain.com.au/transactions-users-api/v1/users/loan-tools/ufc",
+              "formActionUrl": "https://www.domain.com.au/loanfinder/basics/new-home?ltm_source=domain&ltm_medium=referral&ltm_campaign=domain_ufc_calculator_buy-listing_web&ltm_content=newloan_check-options",
+              "submitText": "Compare Home Loans",
+              "firstHomeBuyer": "firstHomeBuyer",
+              "queryParams": {
+                "ltm_source": "domain",
+                "ltm_medium": "referral",
+                "ltm_campaign": "domain_ufc_calculator_buy-listing_web",
+                "ltm_content": "newloan_check-options"
+              },
+              "experimentName": "buy_listing_page_calculator_stamp_duty",
+              "groupStats": {
+                "listingId": "2019063146",
+                "deviceType": "desktop"
+              },
+              "hasDeviceSessionId": true
+            }
+          ],
+          "productReviewConfig": {
+            "brandId": "ba7f14c4-3f43-3018-b06c-93d6657e7602",
+            "widgetId": "04115d3d-113e-3cb1-8103-ba0bb5e8d765",
+            "widgetUrl": "https://cdn.productreview.com.au/assets/widgets/loader.js"
+          }
+        },
+        "schoolCatchment": {
+          "schools": [
+            {
+              "id": "",
+              "educationLevel": "primary",
+              "name": "St Patrick's Primary School",
+              "distance": 445.6091060482189,
+              "state": "NSW",
+              "postCode": "2150",
+              "year": "K-6",
+              "gender": "CoEd",
+              "type": "Catholic",
+              "address": "Parramatta, NSW 2150",
+              "url": "http://www.stpatsparra.catholic.edu.au",
+              "domainSeoUrlSlug": "st-patricks-primary-school-nsw-2150-43187"
+            },
+            {
+              "id": "10069",
+              "educationLevel": "secondary",
+              "name": "Our Lady of Mercy College Parramatta",
+              "distance": 462.7610134355936,
+              "state": "NSW",
+              "postCode": "2150",
+              "year": "7-12",
+              "gender": "Girls",
+              "type": "Private",
+              "address": "Parramatta, NSW 2150",
+              "url": "http://www.olmc.nsw.edu.au/",
+              "domainSeoUrlSlug": "our-lady-of-mercy-college-nsw-2150-10069"
+            },
+            {
+              "id": "",
+              "educationLevel": "primary",
+              "name": "Bayanami Public School",
+              "distance": 493.0441229240004,
+              "state": "NSW",
+              "postCode": "2150",
+              "year": "K-6",
+              "gender": "CoEd",
+              "type": "Government",
+              "address": "Parramatta, NSW 2150",
+              "url": "https://bayanami-p.schools.nsw.gov.au/",
+              "domainSeoUrlSlug": "bayanami-public-school-nsw-2150-52721"
+            },
+            {
+              "id": "732",
+              "educationLevel": "secondary",
+              "name": "Macarthur Girls High School",
+              "distance": 583.2224869502213,
+              "state": "NSW",
+              "postCode": "2150",
+              "year": "7-12",
+              "gender": "Girls",
+              "type": "Government",
+              "address": "Parramatta, NSW 2150",
+              "url": "https://macarthurg-h.schools.nsw.gov.au/",
+              "domainSeoUrlSlug": "macarthur-girls-high-school-nsw-2150-732"
+            },
+            {
+              "id": "31",
+              "educationLevel": "secondary",
+              "name": "Arthur Phillip High School",
+              "distance": 749.2012862858176,
+              "state": "NSW",
+              "postCode": "2150",
+              "year": "7-12",
+              "gender": "CoEd",
+              "type": "Government",
+              "address": "Parramatta, NSW 2150",
+              "url": "https://arthurphil-h.schools.nsw.gov.au/",
+              "domainSeoUrlSlug": "arthur-phillip-high-school-nsw-2150-31"
+            },
+            {
+              "id": "",
+              "educationLevel": "combined",
+              "name": "Maronite College of the Holy Family - Parramatta",
+              "distance": 1489.4622608016898,
+              "state": "NSW",
+              "postCode": "2150",
+              "year": "K-12",
+              "gender": "CoEd",
+              "type": "Private",
+              "address": "Harris Park, NSW 2150",
+              "url": "http://www.mchf.nsw.edu.au",
+              "domainSeoUrlSlug": "maronite-college-of-the-holy-family-parramatta-nsw-2150-43693"
+            },
+            {
+              "id": "7847",
+              "educationLevel": "primary",
+              "name": "St Oliver's Primary School",
+              "distance": 1715.140461486765,
+              "state": "NSW",
+              "postCode": "2150",
+              "year": "K-6",
+              "gender": "CoEd",
+              "type": "Catholic",
+              "address": "Harris Park, NSW 2150",
+              "url": "http://www.stoliversharrispark.catholic.edu.au",
+              "domainSeoUrlSlug": "st-olivers-primary-school-nsw-2150-7847"
+            },
+            {
+              "id": "1751",
+              "educationLevel": "primary",
+              "name": "St Monica's Primary School",
+              "distance": 1879.76718884501,
+              "state": "NSW",
+              "postCode": "2151",
+              "year": "K-6",
+              "gender": "CoEd",
+              "type": "Catholic",
+              "address": "North Parramatta, NSW 2151",
+              "url": "http://www.stmonicasparra.catholic.edu.au",
+              "domainSeoUrlSlug": "st-monicas-primary-school-nsw-2151-1751"
+            },
+            {
+              "id": "7852",
+              "educationLevel": "combined",
+              "name": "Redeemer Baptist School",
+              "distance": 1988.0464464769238,
+              "state": "NSW",
+              "postCode": "2151",
+              "year": "K-12",
+              "gender": "CoEd",
+              "type": "Private",
+              "address": "North Parramatta, NSW 2151",
+              "url": "http://www.redeemer.nsw.edu.au",
+              "domainSeoUrlSlug": "redeemer-baptist-school-nsw-2151-7852"
+            },
+            {
+              "id": "10060",
+              "educationLevel": "primary",
+              "name": "Sacred Heart Primary School",
+              "distance": 1988.8157419792585,
+              "state": "NSW",
+              "postCode": "2145",
+              "year": "K-6",
+              "gender": "CoEd",
+              "type": "Catholic",
+              "address": "Westmead, NSW 2145",
+              "url": "http://www.sacredheartwestmead.catholic.edu.au/",
+              "domainSeoUrlSlug": "sacred-heart-primary-school-nsw-2145-10060"
+            },
+            {
+              "id": "7813",
+              "educationLevel": "secondary",
+              "name": "Catherine McAuley Westmead",
+              "distance": 2217.236678441876,
+              "state": "NSW",
+              "postCode": "2145",
+              "year": "7-12",
+              "gender": "Girls",
+              "type": "Catholic",
+              "address": "Westmead, NSW 2145",
+              "url": "http://www.mcauleywestmead.catholic.edu.au",
+              "domainSeoUrlSlug": "catherine-mcauley-high-school-nsw-2145-7813"
+            },
+            {
+              "id": "7814",
+              "educationLevel": "primary",
+              "name": "Mother Teresa Primary School",
+              "distance": 2382.636169018477,
+              "state": "NSW",
+              "postCode": "2145",
+              "year": "K-6",
+              "gender": "CoEd",
+              "type": "Catholic",
+              "address": "Westmead, NSW 2145",
+              "url": "http://www.motherteresawestmead.catholic.edu.au",
+              "domainSeoUrlSlug": "mother-teresa-primary-school-nsw-2145-7814"
+            },
+            {
+              "id": "7853",
+              "educationLevel": "combined",
+              "name": "Tara Anglican School for Girls",
+              "distance": 2446.5903943293984,
+              "state": "NSW",
+              "postCode": "2151",
+              "year": "K-12",
+              "gender": "Girls",
+              "type": "Private",
+              "address": "North Parramatta, NSW 2151",
+              "url": "https://www.tara.nsw.edu.au/",
+              "domainSeoUrlSlug": "tara-anglican-school-for-girls-nsw-2151-7853"
+            }
+          ],
+          "numberOfVisibleSchools": 3,
+          "enableSchoolProfileLink": true,
+          "ads": {
+            "endpoint": "https://ads-api.domain.com.au/v2/ads/list",
+            "params": {
+              "numberOfAds": 2,
+              "environment": "www.domain.com.au",
+              "brand": "Domain",
+              "platform": "Website",
+              "liveRailEnabled": true,
+              "cat": "buy",
+              "cat1": "details",
+              "userType": "buy",
+              "adType": "schoolsponsorship",
+              "adWidth": 1,
+              "adHeight": 1,
+              "locations": [
+                {
+                  "state": "NSW",
+                  "region": "Sydney Region",
+                  "area": "Parramatta",
+                  "suburb": "Parramatta",
+                  "postCode": "2150"
+                }
+              ],
+              "deviceType": "Desktop"
+            }
+          },
+          "addressParts": {
+            "streetNumber": "18",
+            "unitNumber": "17",
+            "street": "Sorrell Street",
+            "suburb": "Parramatta",
+            "stateAbbreviation": "nsw",
+            "postcode": "2150",
+            "displayAddress": "17/18 Sorrell Street, Parramatta NSW 2150",
+            "displayType": "fullAddress"
+          },
+          "adId": "2019063146",
+          "feedbackUrl": "/phoenix/api/school-data/report-error"
+        },
+        "whatIsNearby": {},
+        "neighbourhoodInsights": {
+          "age0To19": 0.194199249,
+          "age20To39": 0.467843652,
+          "age40To59": 0.283732653,
+          "age60Plus": 0.05422446,
+          "longTermResident": 0.262206137,
+          "owner": 0.208333328,
+          "renter": 0.7916667,
+          "family": 0.6436597,
+          "single": 0.3563403,
+          "map": {
+            "mobile": "https://maps.googleapis.com/maps/api/staticmap?size=1000x600&style=element:labels&path=weight:2|fillcolor:0xccf1f0|color:0x33bab5|enc:pnjmEiotx[vGh@h@d@zAyDcAw@oOcC]zFrEh@&client=gme-fairfax&signature=ZN9hr_Qo3f9keACBZjgt1260S8o%3D"
+          },
+          "showIncomeAndExpenses": false
+        },
+        "locationProfileCards": {
+          "profiles": [
+            {
+              "type": "building",
+              "profileUrl": "https://www.domain.com.au/building-profile/18-sorrell-street-parramatta-nsw-2150",
+              "onMarketType": "sale",
+              "address": {
+                "streetNumber": "18",
+                "streetName": "Sorrell",
+                "streetType": "St",
+                "streetTypeLong": "Street",
+                "suburb": "Parramatta",
+                "postcode": "2150",
+                "state": "NSW",
+                "coordinates": {
+                  "lng": 151.00764,
+                  "lat": -33.80996
+                }
+              },
+              "statistics": {
+                "owners": 49,
+                "tenants": 90,
+                "propertyTypes": [
+                  {
+                    "type": "Unit",
+                    "total": 0,
+                    "forSale": 0,
+                    "forRent": 0,
+                    "soldLast12Months": 0,
+                    "rentedLast12Months": 0
+                  },
+                  {
+                    "type": "Townhouse",
+                    "total": 0,
+                    "forSale": 0,
+                    "forRent": 0,
+                    "soldLast12Months": 0,
+                    "rentedLast12Months": 0
+                  },
+                  {
+                    "type": "House",
+                    "total": 1,
+                    "forSale": 0,
+                    "forRent": 0,
+                    "soldLast12Months": 0,
+                    "rentedLast12Months": 1
+                  },
+                  {
+                    "type": "Other",
+                    "total": 138,
+                    "forSale": 2,
+                    "forRent": 1,
+                    "soldLast12Months": 4,
+                    "rentedLast12Months": 22
+                  }
+                ],
+                "averageOwnerOccupierTenureMonths": 0
+              },
+              "propertyDetails": {
+                "bedrooms": 2,
+                "bathrooms": 2,
+                "carspaces": 1,
+                "propertyType": "Apartment / Unit / Flat"
+              }
+            },
+            {
+              "type": "street",
+              "profileUrl": "https://www.domain.com.au/street-profile/sorrell-street-parramatta-nsw-2150",
+              "onMarketType": "sale",
+              "address": {
+                "streetName": "Sorrell",
+                "streetType": "St",
+                "streetTypeLong": "Street",
+                "suburb": "Parramatta",
+                "postcode": "2150",
+                "state": "NSW"
+              },
+              "statistics": {
+                "owners": 336,
+                "tenants": 422,
+                "propertyTypes": [
+                  {
+                    "type": "Unit",
+                    "total": 18,
+                    "forSale": 0,
+                    "forRent": 2,
+                    "soldLast12Months": 0,
+                    "rentedLast12Months": 3
+                  },
+                  {
+                    "type": "Townhouse",
+                    "total": 0,
+                    "forSale": 0,
+                    "forRent": 0,
+                    "soldLast12Months": 0,
+                    "rentedLast12Months": 0
+                  },
+                  {
+                    "type": "House",
+                    "total": 13,
+                    "forSale": 0,
+                    "forRent": 0,
+                    "soldLast12Months": 0,
+                    "rentedLast12Months": 1
+                  },
+                  {
+                    "type": "Other",
+                    "total": 727,
+                    "forSale": 6,
+                    "forRent": 9,
+                    "soldLast12Months": 32,
+                    "rentedLast12Months": 75
+                  }
+                ],
+                "averageOwnerOccupierTenureMonths": 0
+              },
+              "propertyDetails": {
+                "bedrooms": 2,
+                "bathrooms": 2,
+                "carspaces": 1,
+                "propertyType": "Apartment / Unit / Flat"
+              }
+            }
+          ]
+        },
+        "suburbInsights": {
+          "beds": 2,
+          "propertyType": "Unit",
+          "suburb": "Parramatta",
+          "suburbProfileUrl": "/suburb-profile/parramatta-nsw-2150",
+          "medianPrice": 620000,
+          "medianRentPrice": 610,
+          "avgDaysOnMarket": 94,
+          "auctionClearance": 61,
+          "nrSoldThisYear": 414,
+          "entryLevelPrice": 460000,
+          "luxuryLevelPrice": 805000,
+          "renterPercentage": 0.7081834010446895,
+          "singlePercentage": 0.44906079392986026,
+          "demographics": {
+            "population": 25793,
+            "avgAge": "20 to 39",
+            "owners": 0.2918165989553105,
+            "renters": 0.7081834010446895,
+            "families": 0.5509392060701397,
+            "singles": 0.44906079392986026,
+            "clarification": true
+          },
+          "salesGrowthList": [
+            {
+              "medianSoldPrice": 635000,
+              "annualGrowth": 0,
+              "numberSold": 217,
+              "year": "2018",
+              "daysOnMarket": 105
+            },
+            {
+              "medianSoldPrice": 610000,
+              "annualGrowth": -0.03937007874015748,
+              "numberSold": 208,
+              "year": "2019",
+              "daysOnMarket": 128
+            },
+            {
+              "medianSoldPrice": 602000,
+              "annualGrowth": -0.013114754098360656,
+              "numberSold": 183,
+              "year": "2020",
+              "daysOnMarket": 97
+            },
+            {
+              "medianSoldPrice": 599000,
+              "annualGrowth": -0.0049833887043189366,
+              "numberSold": 280,
+              "year": "2021",
+              "daysOnMarket": 125
+            },
+            {
+              "medianSoldPrice": 600000,
+              "annualGrowth": 0.001669449081803005,
+              "numberSold": 350,
+              "year": "2022",
+              "daysOnMarket": 81
+            },
+            {
+              "medianSoldPrice": 620000,
+              "annualGrowth": 0.03333333333333333,
+              "numberSold": 414,
+              "year": "2023",
+              "daysOnMarket": 94
+            }
+          ],
+          "mostRecentSale": null
+        },
+        "otherProjects": [],
+        "gallery": {
+          "slides": [
+            {
+              "thumbnail": "https://rimh2.domainstatic.com.au/9Ba6WqIBMrmBcNVmJKPOHvtnVjI=/fit-in/144x106/filters:format(jpeg):quality(80):no_upscale()/2019063146_1_1_240219_070518-w1600-h1067",
+              "images": {
+                "original": {
+                  "url": "https://rimh2.domainstatic.com.au/lq7RHrPVtq-pdKxq1AUgey90ph4=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2019063146_1_1_240219_070518-w1600-h1067",
+                  "width": 1600,
+                  "height": 1067
+                },
+                "tablet": {
+                  "url": "https://rimh2.domainstatic.com.au/3NXw3TR9fnoFF3RqV7ybD08_Aic=/fit-in/1020x1020/filters:format(jpeg):quality(80):no_upscale()/2019063146_1_1_240219_070518-w1600-h1067",
+                  "width": 1020,
+                  "height": 680
+                },
+                "mobile": {
+                  "url": "https://rimh2.domainstatic.com.au/0BR0fGaHCbBCy7CY7G-GY8fCXXI=/fit-in/600x800/filters:format(jpeg):quality(80):no_upscale()/2019063146_1_1_240219_070518-w1600-h1067",
+                  "width": 600,
+                  "height": 400
+                }
+              },
+              "embedUrl": null,
+              "mediaType": "image"
+            },
+            {
+              "thumbnail": "https://rimh2.domainstatic.com.au/OYZN6zf0l5IRNiHOYcGSYjnVo-I=/fit-in/144x106/filters:format(jpeg):quality(80):no_upscale()/2019063146_2_1_240219_070518-w1600-h1067",
+              "images": {
+                "original": {
+                  "url": "https://rimh2.domainstatic.com.au/DW-qKcpKsMyKJO5Qoy2xadSOnVM=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2019063146_2_1_240219_070518-w1600-h1067",
+                  "width": 1600,
+                  "height": 1067
+                },
+                "tablet": {
+                  "url": "https://rimh2.domainstatic.com.au/dNk0bHuiUcawsr7i9X65TUWOIqA=/fit-in/1020x1020/filters:format(jpeg):quality(80):no_upscale()/2019063146_2_1_240219_070518-w1600-h1067",
+                  "width": 1020,
+                  "height": 680
+                },
+                "mobile": {
+                  "url": "https://rimh2.domainstatic.com.au/eNf66QbHkvAi4uCT0Svpl8Mym8k=/fit-in/600x800/filters:format(jpeg):quality(80):no_upscale()/2019063146_2_1_240219_070518-w1600-h1067",
+                  "width": 600,
+                  "height": 400
+                }
+              },
+              "embedUrl": null,
+              "mediaType": "image"
+            },
+            {
+              "thumbnail": "https://rimh2.domainstatic.com.au/56yrO0SONpnNC2-3FfcALuN37P8=/fit-in/144x106/filters:format(jpeg):quality(80):no_upscale()/2019063146_3_1_240219_070518-w1600-h1067",
+              "images": {
+                "original": {
+                  "url": "https://rimh2.domainstatic.com.au/ZnLHmNsGOzzuM7omgvvQStw1zN8=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2019063146_3_1_240219_070518-w1600-h1067",
+                  "width": 1600,
+                  "height": 1067
+                },
+                "tablet": {
+                  "url": "https://rimh2.domainstatic.com.au/JAyQKkKjPz4t8TIu6wt0pQLZf9k=/fit-in/1020x1020/filters:format(jpeg):quality(80):no_upscale()/2019063146_3_1_240219_070518-w1600-h1067",
+                  "width": 1020,
+                  "height": 680
+                },
+                "mobile": {
+                  "url": "https://rimh2.domainstatic.com.au/npVI4g-yykSdhvxqNPyba_pBsGY=/fit-in/600x800/filters:format(jpeg):quality(80):no_upscale()/2019063146_3_1_240219_070518-w1600-h1067",
+                  "width": 600,
+                  "height": 400
+                }
+              },
+              "embedUrl": null,
+              "mediaType": "image"
+            },
+            {
+              "thumbnail": "https://rimh2.domainstatic.com.au/Ol4A9Lxw8GAKxrswAaIBfeIJ7fU=/fit-in/144x106/filters:format(jpeg):quality(80):no_upscale()/2019063146_4_1_240219_070518-w1600-h1067",
+              "images": {
+                "original": {
+                  "url": "https://rimh2.domainstatic.com.au/XOpkjmHxi9wiJ13GShuZwmArkus=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2019063146_4_1_240219_070518-w1600-h1067",
+                  "width": 1600,
+                  "height": 1067
+                },
+                "tablet": {
+                  "url": "https://rimh2.domainstatic.com.au/wOVlfi1lJt3JPi41J9oKXrPz_8s=/fit-in/1020x1020/filters:format(jpeg):quality(80):no_upscale()/2019063146_4_1_240219_070518-w1600-h1067",
+                  "width": 1020,
+                  "height": 680
+                },
+                "mobile": {
+                  "url": "https://rimh2.domainstatic.com.au/3dPkTGf-RJ3ZLKczXaj5DAEYou4=/fit-in/600x800/filters:format(jpeg):quality(80):no_upscale()/2019063146_4_1_240219_070518-w1600-h1067",
+                  "width": 600,
+                  "height": 400
+                }
+              },
+              "embedUrl": null,
+              "mediaType": "image"
+            },
+            {
+              "thumbnail": "https://rimh2.domainstatic.com.au/0Wab9wzBtV7YfvA2EVVwhVHSMlA=/fit-in/144x106/filters:format(jpeg):quality(80):no_upscale()/2019063146_5_1_240219_070518-w1600-h1067",
+              "images": {
+                "original": {
+                  "url": "https://rimh2.domainstatic.com.au/GtiafdddFX6J6iQKrRNbZtkHcM0=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2019063146_5_1_240219_070518-w1600-h1067",
+                  "width": 1600,
+                  "height": 1067
+                },
+                "tablet": {
+                  "url": "https://rimh2.domainstatic.com.au/O_hbf5XweG7qdDj9Lnoj5jpaKdk=/fit-in/1020x1020/filters:format(jpeg):quality(80):no_upscale()/2019063146_5_1_240219_070518-w1600-h1067",
+                  "width": 1020,
+                  "height": 680
+                },
+                "mobile": {
+                  "url": "https://rimh2.domainstatic.com.au/RAOUs6QB56ajHX33rXcJQL_emTg=/fit-in/600x800/filters:format(jpeg):quality(80):no_upscale()/2019063146_5_1_240219_070518-w1600-h1067",
+                  "width": 600,
+                  "height": 400
+                }
+              },
+              "embedUrl": null,
+              "mediaType": "image"
+            },
+            {
+              "thumbnail": "https://rimh2.domainstatic.com.au/tpjJ9ynujBQAbMnYKes9mNWRk3E=/fit-in/144x106/filters:format(jpeg):quality(80):no_upscale()/2019063146_6_1_240219_070518-w1600-h1067",
+              "images": {
+                "original": {
+                  "url": "https://rimh2.domainstatic.com.au/s17rRg2TEdN1UhqDnAWNMjIZss0=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2019063146_6_1_240219_070518-w1600-h1067",
+                  "width": 1600,
+                  "height": 1067
+                },
+                "tablet": {
+                  "url": "https://rimh2.domainstatic.com.au/mpQ8UbBoIS6t-wAwO4LBnhq22vY=/fit-in/1020x1020/filters:format(jpeg):quality(80):no_upscale()/2019063146_6_1_240219_070518-w1600-h1067",
+                  "width": 1020,
+                  "height": 680
+                },
+                "mobile": {
+                  "url": "https://rimh2.domainstatic.com.au/mwIJlD4Dbu10rYae8-dkYN6SYf0=/fit-in/600x800/filters:format(jpeg):quality(80):no_upscale()/2019063146_6_1_240219_070518-w1600-h1067",
+                  "width": 600,
+                  "height": 400
+                }
+              },
+              "embedUrl": null,
+              "mediaType": "image"
+            },
+            {
+              "thumbnail": "https://rimh2.domainstatic.com.au/j4fvJTr7NFNuz4bV2dALKf20_iE=/fit-in/144x106/filters:format(jpeg):quality(80):background_color(white):no_upscale()/2019063146_7_3_240219_070518-w1553-h1200",
+              "images": {
+                "original": {
+                  "url": "https://rimh2.domainstatic.com.au/E7RZOxFr52vvfG4ZdJyPw-2Nyqw=/fit-in/1920x1080/filters:format(jpeg):quality(80):background_color(white):no_upscale()/2019063146_7_3_240219_070518-w1553-h1200",
+                  "width": 1398,
+                  "height": 1080
+                },
+                "tablet": {
+                  "url": "https://rimh2.domainstatic.com.au/dtc7Tpb0k4eNma81HuUO9fcad1I=/fit-in/1020x1020/filters:format(jpeg):quality(80):background_color(white):no_upscale()/2019063146_7_3_240219_070518-w1553-h1200",
+                  "width": 1020,
+                  "height": 788
+                },
+                "mobile": {
+                  "url": "https://rimh2.domainstatic.com.au/dtc7Tpb0k4eNma81HuUO9fcad1I=/fit-in/1020x1020/filters:format(jpeg):quality(80):background_color(white):no_upscale()/2019063146_7_3_240219_070518-w1553-h1200",
+                  "width": 1020,
+                  "height": 788
+                }
+              },
+              "embedUrl": null,
+              "mediaType": "floorplan"
+            },
+            {
+              "thumbnail": "https://rimh2.domainstatic.com.au/9Ba6WqIBMrmBcNVmJKPOHvtnVjI=/fit-in/144x106/filters:format(jpeg):quality(80):no_upscale()/2019063146_1_1_240219_070518-w1600-h1067",
+              "images": {
+                "original": {
+                  "url": "https://rimh2.domainstatic.com.au/lq7RHrPVtq-pdKxq1AUgey90ph4=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2019063146_1_1_240219_070518-w1600-h1067",
+                  "width": 1600,
+                  "height": 1067
+                },
+                "tablet": {
+                  "url": "https://rimh2.domainstatic.com.au/3NXw3TR9fnoFF3RqV7ybD08_Aic=/fit-in/1020x1020/filters:format(jpeg):quality(80):no_upscale()/2019063146_1_1_240219_070518-w1600-h1067",
+                  "width": 1020,
+                  "height": 680
+                },
+                "mobile": {
+                  "url": "https://rimh2.domainstatic.com.au/0BR0fGaHCbBCy7CY7G-GY8fCXXI=/fit-in/600x800/filters:format(jpeg):quality(80):no_upscale()/2019063146_1_1_240219_070518-w1600-h1067",
+                  "width": 600,
+                  "height": 400
+                }
+              },
+              "embedUrl": "https://my.matterport.com/show/?m=z9AHemsmQUC",
+              "mediaType": "virtualTour"
+            }
+          ]
+        },
+        "additionalLinks": {
+          "brochureLink": null
+        },
+        "header": {
+          "breadcrumbs": [
+            {
+              "title": "Sale",
+              "url": "/sale/"
+            },
+            {
+              "title": "NSW",
+              "url": "/sale/nsw/"
+            },
+            {
+              "title": "Parramatta",
+              "url": "/sale/parramatta-nsw-2150/"
+            },
+            {
+              "title": "Apartments",
+              "url": "/sale/parramatta-nsw-2150/apartment-unit-flat/"
+            },
+            {
+              "title": "2-Bedrooms",
+              "url": "/sale/parramatta-nsw-2150/apartment-unit-flat/2-bedrooms/"
+            },
+            {
+              "title": "17/18 Sorrell Street, Parramatta NSW 2150",
+              "url": "/17-18-sorrell-street-parramatta-nsw-2150-2019063146"
+            }
+          ],
+          "baseUrl": "www.domain.com.au",
+          "signupUrl": "https://www.domain.com.au//authentications/signup",
+          "logoutUrl": "https://www.domain.com.au//authentications/logoff",
+          "loginUrl": "https://www.domain.com.au//authentications/login"
+        },
+        "listingSummary": {
+          "beds": 2,
+          "baths": 2,
+          "parking": 1,
+          "title": "JUST LISTED!",
+          "price": "JUST LISTED!",
+          "address": "17/18 Sorrell Street, Parramatta NSW 2150",
+          "promoType": "platinum",
+          "stats": [],
+          "listingType": "rent",
+          "propertyType": "Apartment / Unit / Flat",
+          "status": "new",
+          "mode": "buy",
+          "method": "privateTreaty",
+          "isRural": false,
+          "houses": 0,
+          "showDefaultFeatures": true
+        },
+        "propertyProfileUrlSlug": "17-18-sorrell-street-parramatta-nsw-2150",
+        "agents": [
+          {
+            "name": "James Way",
+            "photo": "https://rimh2.domainstatic.com.au/AdVMboJX2rove3xMtWzpI8eQO9s=/120x120/top/filters:format(jpeg):quality(80):no_upscale()/https://images.domain.com.au/img/28362/contact_1923798.jpeg?date=638440169537770000",
+            "phone": "",
+            "mobile": "0416910340",
+            "agentProfileUrl": "https://www.domain.com.au/real-estate-agent/james-way-1923798/",
+            "email": null
+          },
+          {
+            "name": "Frankie Gonzaga",
+            "photo": "https://rimh2.domainstatic.com.au/iBqx-yqUPLaUTig0-C23t6Nc3Q8=/120x120/top/filters:format(jpeg):quality(80):no_upscale()/https://images.domain.com.au/img/28362/contact_1900169.jpeg?date=638440169539030000",
+            "phone": "1300 000548",
+            "mobile": "0450 680 808 ",
+            "email": null
+          }
+        ],
+        "inspection": {
+          "inspectionTimes": [
+            {
+              "dayOfWeek": "Thursday",
+              "day": "22",
+              "month": "February",
+              "id": "2024-02-22T17:00:002024-02-22T17:30:00",
+              "openingDateTime": "2024-02-22T17:00:00",
+              "closingDateTime": "2024-02-22T17:30:00",
+              "repeat": false,
+              "time": "5:00pm - 5:30pm"
+            },
+            {
+              "dayOfWeek": "Saturday",
+              "day": "24",
+              "month": "February",
+              "id": "2024-02-24T10:15:002024-02-24T10:45:00",
+              "openingDateTime": "2024-02-24T10:15:00",
+              "closingDateTime": "2024-02-24T10:45:00",
+              "repeat": false,
+              "time": "10:15am - 10:45am"
+            }
+          ],
+          "nextInspection": "Thursday, 5:00pm",
+          "displayAddress": "17/18 Sorrell Street, Parramatta NSW 2150",
+          "displayStreetNumber": "18",
+          "displayStreet": "Sorrell Street",
+          "displaySuburb": "Parramatta",
+          "displayState": "NSW",
+          "displayPostcode": "2150",
+          "appointmentOnly": false,
+          "timeZone": "Australia/Sydney"
+        },
+        "features": ["Ensuite"],
+        "structuredFeatures": [
+          {
+            "name": "Ensuite",
+            "category": "Indoor",
+            "source": "advertiser"
+          }
+        ],
+        "priceGuide": {
+          "agencyName": "LIV REALTY PTY LTD",
+          "agents": [
+            {
+              "name": "James Way",
+              "photo": "https://rimh2.domainstatic.com.au/AdVMboJX2rove3xMtWzpI8eQO9s=/120x120/top/filters:format(jpeg):quality(80):no_upscale()/https://images.domain.com.au/img/28362/contact_1923798.jpeg?date=638440169537770000",
+              "phone": "",
+              "mobile": "0416910340",
+              "agentProfileUrl": "https://www.domain.com.au/real-estate-agent/james-way-1923798/",
+              "email": null
+            },
+            {
+              "name": "Frankie Gonzaga",
+              "photo": "https://rimh2.domainstatic.com.au/iBqx-yqUPLaUTig0-C23t6Nc3Q8=/120x120/top/filters:format(jpeg):quality(80):no_upscale()/https://images.domain.com.au/img/28362/contact_1900169.jpeg?date=638440169539030000",
+              "phone": "1300 000548",
+              "mobile": "0450 680 808 ",
+              "email": null
+            }
+          ],
+          "theme": "domain",
+          "estimatedPrice": {
+            "from": null,
+            "to": null
+          },
+          "suburbMedianPrice": {
+            "medianPrice": null,
+            "medianPropertyType": null,
+            "suburb": "",
+            "source": "",
+            "sourceCollectionDate": null,
+            "sourceDateFrom": null,
+            "sourceDateTo": null
+          },
+          "comparableData": {
+            "comparableProperty": []
+          },
+          "pdfLink": null,
+          "state": "NSW"
+        },
+        "stampDutyEstimate": null,
+        "map": {
+          "apiKey": "AIzaSyCx5gZA9rTOwBUcbFuiEk12Y87Pn7VKCak",
+          "latitude": -33.8096389,
+          "longitude": 151.0077424,
+          "displayCentreLatitude": null,
+          "displayCentreLongitude": null,
+          "displayCentreAddress": "",
+          "suburbProfileUrl": "https://www.domain.com.au/suburb-profile/parramatta-nsw-2150",
+          "hasDisplayCentre": false,
+          "placesLoggedIn": false,
+          "placesScrollPosition": -1
+        },
+        "domainSays": {
+          "firstListedDate": "2024-02-19T18:05:18.243",
+          "forSalePropertiesUrl": "/sale/parramatta-nsw-2150/apartment-unit-flat/2-bedrooms/?ssubs=0",
+          "lastSoldOnDate": "2009-12-30T00:00:00",
+          "listingMode": "buy",
+          "medianRentPrice": 610,
+          "medianSoldPrice": 620000,
+          "numberSold": 414,
+          "propertyCategoryForSale": 118,
+          "soldPropertiesUrl": "/sold-listings/parramatta-nsw-2150/apartment-unit-flat/2-bedrooms/?ssubs=0",
+          "updatedDate": "2024-02-19T18:05:18.243",
+          "storyPropertyType": "Unit",
+          "propertyBedrooms": 2
+        },
+        "meta": {
+          "baseUrl": "https://www.domain.com.au/",
+          "loginUrl": "https://www.domain.com.au//authentications/login"
+        },
+        "enquiryForm": {
+          "enquiryUrl": "/phoenix/api/simple-enquiry",
+          "buyerTypes": [
+            {
+              "value": "first-home-buyer",
+              "label": "First Home Buyer"
+            },
+            {
+              "value": "buyer",
+              "label": "Buyer"
+            },
+            {
+              "value": "investor",
+              "label": "Investor"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            }
+          ]
+        },
+        "thumborBaseUrl": "",
+        "oneFormOptIn": false,
+        "estimatedDeviceWidth": "1280px",
+        "estimatedDeviceHeight": "800px",
+        "noAds": false,
+        "fetchAndPublishUserData": true,
+        "shortlistExperimentFlag": true,
+        "isLandEstate": false,
+        "requiresTrackingConsent": false,
+        "placesEnabled": true,
+        "displayType": "fullAddress",
+        "backToSearchUrl": "/sale/parramatta-nsw-2150/apartment/",
+        "canGoBackToSearch": false,
+        "primaryPropertyType": "Apartment",
+        "propertyId": "NV-8242-JV",
+        "rentalApplicationActive": false,
+        "rentalApplicationData": {
+          "id": null,
+          "status": "",
+          "progress": 0,
+          "url": ""
+        },
+        "enableDownloadPropertyReport": false,
+        "enableMobileBannerAppDriver": false,
+        "forceMobileBannerAppDriver": false,
+        "enableSuggestedFeatures": true,
+        "enableVerticalGallery": true,
+        "enableHomepassAPIV2": false,
+        "featureFlags": {
+          "enableContentSnippet": false,
+          "enableContentSnippetWithPostcodes": false,
+          "disableAdsFlag": false,
+          "enableEnquiryCustomisations": false,
+          "shortlistExperimentFlag": true,
+          "enableSuggestedFeatures": true,
+          "enableAdditionalDescriptionFeature": true,
+          "enableVerticalGallery": true,
+          "enableRetirements": true,
+          "enableListingFeedback": true,
+          "enablePropertyNextSteps": true,
+          "enablePropertyNextStepsBackend": true,
+          "enableAddNotes": false,
+          "textAdsEnabled": true,
+          "enableMobileBannerAppDriver": false,
+          "enableCustomSort": true,
+          "enableMRECAd": false,
+          "enableVectorGoogleMaps": false,
+          "enableBranch": true,
+          "googleOneTap": true,
+          "schoolSearchMapView": true,
+          "enablePropertyAlertPaginationCTA": false,
+          "enableIndependentOne": false,
+          "enableIndependentTwo": true,
+          "enableIndependentThree": false,
+          "enableEarlyAccessOnboarding": true,
+          "enableHomePagePropertyAlert": true,
+          "enableShortlistPhotoGallery": true,
+          "enableChildcare": true,
+          "enablePropertyAlertOverlay": true,
+          "enableShortlistNotesEditing": false,
+          "enableShortlistNotesEditingMobile": false,
+          "dlfFunnelEnableNewLiabilities": false,
+          "enableShortlistSignupDriverMl": true,
+          "enableShortlistSignupDriverSimple": false,
+          "enableHomepageSchoolFirstTypeahead": false,
+          "enableGraphQLSuggestLocations": true,
+          "enableEnquiryFormSafetyTips": true,
+          "shareShortlistBranchExperiment": false,
+          "enableNewDevelopmentEnquiryForm": false,
+          "enableTypeaheadSchoolMessage": false,
+          "enableSuggestSuburbNewPill": false,
+          "enableEnquiryRecaptcha": false,
+          "isNewProjectTemplate": true,
+          "enableBuyerTypeExperiment": false,
+          "enableBuyerTypeExperimentStarted": false,
+          "enableNewProjectFaqs": true,
+          "mobileWebThirdPartyRentalButton": true,
+          "enableUPVExperiment": true,
+          "enableNewProjectListingViewMore": false,
+          "dlfFunnelBatchAnswers": true,
+          "newDevsDiscoveryOptimisation": true,
+          "enableRequestFloorPlanForChildListing": true,
+          "enableSearchDisplayPriceRange": false,
+          "enableGraphQLSearch": false,
+          "newDevsDiscoveryPopup": false,
+          "enableNBNConnection": true,
+          "enableGraphQLSavedSearch": false,
+          "enableFixedRateDriver": true,
+          "enableFixedRateLendiAPI": true,
+          "topspotGQL": false,
+          "adsRecoveryPopup": true,
+          "enableStaticGoogleMap": true,
+          "enableBYBTextlink": false,
+          "enableBrandRefreshMapPins": true,
+          "enableLandSizeSlider": true,
+          "enableGA4Tracking": false,
+          "enableBankAdsOnListings": false,
+          "enableGQLOnListingsPage": false,
+          "immediateEmailNotifications": false,
+          "enquiryLabelExperiment": false,
+          "postInspectionAd": false,
+          "postEnquiryAd": false,
+          "stickyAgentCard": false,
+          "startBuyerTypeExperiment": false
+        },
+        "homeloansApiBaseUrl": "https://home-loans-api.domainloanfinder.com.au",
+        "mixpanelToken": "ab0bde70050c3eabaaf8824402fa01e0",
+        "sessionToken": "e154772f-a8ba-4ce3-8bb6-b2976125ff1c",
+        "isRetirement": false,
+        "enablePropertyNextSteps": true,
+        "enablePropertyNextStepsBackend": true,
+        "isDlfFunnelModalOpen": false,
+        "faqs": [
+          {
+            "question": "How many bedrooms does 17/18 Sorrell Street, Parramatta have?",
+            "answer": [
+              {
+                "text": "17/18 Sorrell Street, Parramatta is a 2 bedroom apartment."
+              }
+            ]
+          },
+          {
+            "question": "What are the key property features of 17/18 Sorrell Street, Parramatta?",
+            "answer": [
+              {
+                "text": "Explore all key property features for 17/18 Sorrell Street, Parramatta. "
+              },
+              {
+                "text": "Click here to find out more.",
+                "scrollTo": "property-features"
+              }
+            ]
+          },
+          {
+            "question": "What is the size of the property at 17/18 Sorrell Street, Parramatta?",
+            "answer": [
+              {
+                "text": "The property size for 17/18 Sorrell Street, Parramatta has not been disclosed. To find detailed information on property size, "
+              },
+              {
+                "text": "contact the agent.",
+                "scrollTo": "enquiry-form"
+              }
+            ]
+          },
+          {
+            "question": "How many car spaces does 17/18 Sorrell Street, Parramatta have?",
+            "answer": [
+              {
+                "text": "17/18 Sorrell Street, Parramatta has 1 car space."
+              }
+            ]
+          },
+          {
+            "question": "What is the listing price for 17/18 Sorrell Street, Parramatta?",
+            "answer": [
+              {
+                "text": "LIV REALTY PTY LTD has not listed a sale price for 17/18 Sorrell Street, Parramatta. "
+              },
+              {
+                "text": "Contact the agent for a price guide.",
+                "scrollTo": "enquiry-form"
+              }
+            ]
+          }
+        ],
+        "shortlistPriceChange": null,
+        "correlationId": "4e639601-a313-4da8-b7e8-04b152ec2c13",
+        "isRedirectedFromPremarket": false,
+        "graphqlApi": "https://www.domain.com.au/graphql",
+        "enableBeforeYouBidNew": true,
+        "enableEnquiryCustomisations": false,
+        "projectDetails": null,
+        "rootGraphQuery": {
+          "listingByIdV2": {
+            "project": null,
+            "__typename": "ListingDetails",
+            "agency": {
+              "branding": {
+                "banner": {
+                  "url": "https://rimh2.domainstatic.com.au/S5RdNAfKLMA77udA6qw-nYADI5g=/filters:format(png):quality(80):no_upscale()/https://images.domain.com.au/img/Agencys/28362/banner_28362.png?date=638440241853865457",
+                  "__typename": "Image"
+                },
+                "logo": {
+                  "url": "https://rimh2.domainstatic.com.au/oj0BdhtHG2-R3dpKAzpwaIUUpGw=/filters:format(png):quality(80):no_upscale()/https://images.domain.com.au/img/Agencys/28362/logo_28362.png?date=638440241853865483",
+                  "__typename": "Image"
+                },
+                "logoSmall": {
+                  "url": "https://rimh2.domainstatic.com.au/Dp72O2V5QkeT5u2_H70yVVAdUHQ=/filters:format(png):quality(80):no_upscale()/https://images.domain.com.au/img/Agencys/28362/searchlogo_28362.png?date=638440241853865474",
+                  "__typename": "Image"
+                },
+                "backgroundColour": "#000000",
+                "logoColour": "#000000",
+                "__typename": "AgencyBranding"
+              },
+              "contactDetails": {
+                "general": {
+                  "phone": "02 4777 0001",
+                  "__typename": "AgencyContactDetailsGeneral"
+                },
+                "__typename": "AgencyContactDetails"
+              },
+              "isArchived": false,
+              "name": "LIV REALTY PTY LTD",
+              "profileUrl": "livrealtyptyltd-28362",
+              "website": "http://www.livrealty.com",
+              "__typename": "Agency"
+            },
+            "agents": [
+              {
+                "fullName": "James Way",
+                "email": "james@livrealty.com",
+                "mobileNumber": "0416910340",
+                "landlineNumber": null,
+                "isActiveProfilePage": true,
+                "profileUrl": "https://www.domain.com.au/real-estate-agent/james-way-1923798",
+                "photo": {
+                  "url": "https://rimh2.domainstatic.com.au/uRrZ84FVLywG-NatNmDCYRIbe6s=/filters:format(png):quality(80):no_upscale()/https://images.domain.com.au/img/28362/contact_1923798.jpeg?date=638440169537770000",
+                  "__typename": "Image"
+                },
+                "__typename": "Agent"
+              },
+              {
+                "fullName": "Frankie Gonzaga",
+                "email": "frankie@livrealty.com",
+                "mobileNumber": "0450 680 808 ",
+                "landlineNumber": "1300 000548",
+                "isActiveProfilePage": false,
+                "profileUrl": "https://www.domain.com.au/real-estate-agent/frankie-gonzaga-1900169",
+                "photo": {
+                  "url": "https://rimh2.domainstatic.com.au/-uH6Zf3rmrV03DeNgXRYVkJhIlY=/filters:format(png):quality(80):no_upscale()/https://images.domain.com.au/img/28362/contact_1900169.jpeg?date=638440169539030000",
+                  "__typename": "Image"
+                },
+                "__typename": "Agent"
+              }
+            ],
+            "inspectionDetails": {
+              "byAppointmentOnly": false,
+              "inspections": [
+                {
+                  "closingDateTime": {
+                    "day": 22,
+                    "dayOfWeek": "Thursday",
+                    "isoDate": "2024-02-22T17:30:00",
+                    "month": "February",
+                    "time": "5:30pm",
+                    "year": 2024,
+                    "__typename": "DateTime"
+                  },
+                  "openingDateTime": {
+                    "day": 22,
+                    "dayOfWeek": "Thursday",
+                    "isoDate": "2024-02-22T17:00:00",
+                    "month": "February",
+                    "time": "5:00pm",
+                    "year": 2024,
+                    "__typename": "DateTime"
+                  },
+                  "repeat": false,
+                  "__typename": "Inspection"
+                },
+                {
+                  "closingDateTime": {
+                    "day": 24,
+                    "dayOfWeek": "Saturday",
+                    "isoDate": "2024-02-24T10:45:00",
+                    "month": "February",
+                    "time": "10:45am",
+                    "year": 2024,
+                    "__typename": "DateTime"
+                  },
+                  "openingDateTime": {
+                    "day": 24,
+                    "dayOfWeek": "Saturday",
+                    "isoDate": "2024-02-24T10:15:00",
+                    "month": "February",
+                    "time": "10:15am",
+                    "year": 2024,
+                    "__typename": "DateTime"
+                  },
+                  "repeat": false,
+                  "__typename": "Inspection"
+                }
+              ],
+              "__typename": "InspectionDetails"
+            },
+            "bathrooms": 2,
+            "bedrooms": 2,
+            "carspaces": 1,
+            "dateListedV2": {
+              "isoDateWithTimeZone": "2024-02-20T05:05:18+11:00",
+              "__typename": "DateTime"
+            },
+            "description": "Nestled in the vibrant heart of Parramatta CBD, mere meters from the tranquil river, this exquisite 2-bedroom, 2-bathroom apartment offers a perfect blend of modern comfort and urban convenience.\r\n\r\nAs you step inside, you're greeted by a spacious and inviting atmosphere, highlighted by a generously sized covered balcony offering a peaceful retreat amidst the bustling cityscape. The apartment boasts a thoughtfully designed layout, featuring a well-appointed kitchen with ample storage and preparation space. The combined living and dining area seamlessly flow together, providing a versatile space for relaxation and entertainment.\r\n\r\nBoth bedrooms have built in wardrobes with the master also having an ensuite, allowing you to retreat into your sanctuary after a big day enjoying all Parramatta has to offer. Positioned minutes away from cafes, schools, dining and nightlife. Experience the ease of city life with close proximity to the train station, ferry wharf and the new light rail just down the end of the street!\r\n\r\nProperty Features:\r\n• 2 bedrooms both with built in wardrobes\r\n• Main bathroom with a bath and ensuite off master bedroom\r\n• Spacious living and dining area\r\n• Internal laundry\r\n• Covered balcony\r\n• Aircon\r\n• Secure complex\r\n• Secure reserved parking\r\n• Communal pool\r\n\r\nPlease contact James on 0416 910 340 or Frankie on 0450 680 808 with any questions or for a private inspection.",
+            "displayableAddress": {
+              "displayAddress": "17/18 Sorrell Street, Parramatta NSW 2150",
+              "postcode": "2150",
+              "state": "NSW",
+              "street": "Sorrell Street",
+              "streetNumber": "18",
+              "suburbName": "Parramatta",
+              "unitNumber": "17",
+              "__typename": "Address"
+            },
+            "features": ["Ensuite"],
+            "headline": "Prime Position In The Heart Of Parramatta!",
+            "listingId": 2019063146,
+            "listingMode": "BUY",
+            "listingType": "RESIDENTIAL",
+            "promoLevel": "PREMIUM_PLUS",
+            "propertyTypes": ["APARTMENT_UNIT_FLAT"],
+            "status": "NEW",
+            "nbnDetails": {
+              "downloadSpeedInMbps": null,
+              "serviceStatus": "available",
+              "techType": "FTTB",
+              "uploadSpeedInMbps": null,
+              "speedTier": "Home Fast",
+              "__typename": "NbnDetails"
+            },
+            "metadata": {
+              "trackingMetadata": "{\"nbnDetails\":\"FTTB\"}",
+              "__typename": "ListingDetailsMetadata"
+            },
+            "staticMapUrl": "https://maps.googleapis.com/maps/api/staticmap?center=-33.8096389,151.0077424&size=1000x360&zoom=16&style=feature:administrative%7Celement:labels.text.fill%7Ccolor:0x444444&style=feature:landscape%7Ccolor:0xf2f2f2&style=feature:poi%7Cvisibility:off&style=feature:poi.business%7Celement:geometry%7Cvisibility:on&style=feature:poi.business%7Celement:labels%7Cvisibility:on&style=feature:poi.business%7Celement:labels.text%7Cvisibility:off&style=feature:poi.business%7Celement:labels.text.stroke%7Cweight:1&style=feature:poi.park%7Celement:geometry.fill%7Ccolor:0xc1eaad%7Cvisibility:on&style=feature:poi.school%7Celement:labels%7Cvisibility:on&style=feature:poi.school%7Celement:labels.text%7Cvisibility:off&style=feature:road%7Csaturation:-100%7Clightness:45&style=feature:road.arterial%7Celement:labels.icon%7Cvisibility:off&style=feature:road.arterial%7Celement:labels.text.fill%7Ccolor:0x7e8694&style=feature:road.highway%7Cvisibility:simplified&style=feature:road.highway%7Celement:geometry.fill%7Ccolor:0xffe449%7Cvisibility:on&style=feature:road.highway%7Celement:geometry.stroke%7Ccolor:0xe5c000%7Cvisibility:on&style=feature:road.highway%7Celement:labels.text.fill%7Ccolor:0x7e8694&style=feature:road.highway.controlled_access%7Celement:geometry.fill%7Ccolor:0xffe449%7Cvisibility:on&style=feature:road.highway.controlled_access%7Celement:geometry.stroke%7Ccolor:0xe5c000%7Cvisibility:on&style=feature:road.local%7Celement:geometry.fill%7Chue:0xff0000%7Cvisibility:on&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x7e8694&style=feature:transit%7Cvisibility:on&style=feature:transit%7Celement:geometry%7Csaturation:-76&style=feature:water%7Ccolor:0xdde6e8%7Cvisibility:on&style=feature:water%7Celement:geometry.fill%7Ccolor:0xc4eef9%7Cvisibility:on&style=feature:water%7Celement:labels.text%7Ccolor:0x5f5d5d%7Cvisibility:simplified&markers=anchor:32,43%7Cicon:https://domain-static.s3.ap-southeast-2.amazonaws.com/fe-server-graphql/listing_page_static_map_marker.png%7C-33.8096389,151.0077424&format=png&key=AIzaSyCx5gZA9rTOwBUcbFuiEk12Y87Pn7VKCak&signature=4fLIGC6xA6yhheXpQaKx_DEsNPI="
+          }
+        }
+      }
+    },
+    "__N_SSP": true
+  },
+  "page": "/listing-details",
+  "query": {},
+  "buildId": "kWSaNYxvr-LIgvT_ojdnm",
+  "assetPrefix": "https://s.domainstatic.com.au/fe-server-search-listings/master-5881",
+  "runtimeConfig": {
+    "version": "9.96.1",
+    "raygunApiKey": "Jc2EG8UJC5PYaGq58+JtVA==",
+    "isDevMode": false,
+    "gtmId": "GTM-M3HVG4",
+    "gtmAdditionalQueryParams": "",
+    "analyticsId": "UA-22518123-1",
+    "optimizeId": "GTM-T6X56MC",
+    "branchKey": "key_live_beUO960ie7SgOCONK8dfVgboqqe0mcGG",
+    "googleRecaptchaSiteKey": "6LeDUaUbAAAAALoyaiI4Yv9TKESEc727OK6H0SmK"
+  },
+  "isFallback": false,
+  "gssp": true,
+  "customServer": true,
+  "scriptLoader": []
+}
