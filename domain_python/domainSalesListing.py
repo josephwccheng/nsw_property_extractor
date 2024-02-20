@@ -1,4 +1,6 @@
 import json
+from bs4 import BeautifulSoup
+import re
 
 
 class SalesListing():
@@ -30,32 +32,30 @@ class SalesListing():
     Note: ipAddress is being tracked
     '''
 
-    def extractRawData(self, rawSalesListingResp):
+    def extractRawSalesData(self, rawSalesListingResp) -> dict:
         '''
             Brute Force Way of obtaining object of the sales
         '''
         resp = rawSalesListingResp.text
-        start = "var digitalData = "
-        end = "var dataLayer"
-        filteredMeta = resp.replace("\n", " ")
-        filteredMeta = filteredMeta.split(start)[1]
-        filteredMeta = filteredMeta.split(end)[0]
-        filteredMeta = filteredMeta.replace(";", "")
-        filteredMeta = filteredMeta.replace("\'", "\"")
+        soup = BeautifulSoup(resp, 'html.parser')
+        allScripts = soup.findAll(
+            'script')
+        digitalDataSearch = "var digitalData = "
+        digitalDataScript = [
+            script.text for script in allScripts if digitalDataSearch in script.text]
+        digitalData = re.search(
+            r"({.*?});", digitalDataScript[0])  # type: ignore
+        if not digitalData:
+            raise FileNotFoundError("Could not extract the reggex phrase")
+        metaData = self.extractDigitalData(
+            json.loads(digitalData[0].rstrip(";")))
 
-        metaData = self.extractDigitalData(json.loads(filteredMeta))
-
-        start = '<script type="application/ld+json">'
-        end = '</script>'
-        filteredBody = rawSalesListingResp.text.replace("\n", " ")
-        filteredBody = filteredBody.split(start)[1]
-        filteredBody = filteredBody.split(end)[0]
-        filteredBody = filteredBody.replace(";", "")
-        filteredBody = filteredBody.replace("\'", "\"")
-
-        body = self.extractPropertyList(json.loads(filteredBody))
-
-        return {"digitalData": metaData, "proprtyList": body}
+        bodyTypeSearch = "application/ld+json"
+        bodyScript = soup.find('script', type=bodyTypeSearch)
+        if bodyScript == None:
+            raise FileNotFoundError("Body Script is null")
+        body = self.extractPropertyList(json.loads(bodyScript.text))
+        return {"digitalData": metaData, "salesList": body}
 
     def extractDigitalData(self, digitalData):
         search = digitalData["page"]["pageInfo"]["search"]
@@ -65,13 +65,13 @@ class SalesListing():
             "resultsRecord": search["resultsRecords"].split(',')
         }
 
-    def extractPropertyList(self, propertyList):
-        output = []
-        for property in propertyList[1:]:
+    def extractPropertyList(self, rawPropertyList) -> list:
+        propertyList = []
+        for property in rawPropertyList[1:]:
             match property["@type"]:
                 case 'Event':
                     location = property['location']
-                    output.append({
+                    propertyList.append({
                         "propertyType": location['@type'],
                         "propertyId": property['url'].split("-")[-1],
                         "name": property['name'],
@@ -90,15 +90,23 @@ class SalesListing():
                         }
                     })
                 case 'Residence':
-                    output.append({
+                    propertyList.append({
                         "propertyType": property["@type"],
                         "address": {
-                            "streetAddress": property['address']['streetAddress'],
-                            "postalCode": property['address']['postalCode'],
-                            "state": property['address']['addressRegion'],
-                            "suburb": property['address']['addressLocality'],
+                            "streetAddress": property['address']['streetAddress'] if 'streetAddress' in property['address'] else "",
+                            "postalCode": property['address']['postalCode'] if 'postalCode' in property['address'] else "",
+                            "state": property['address']['addressRegion'] if 'addressRegion' in property['address'] else "",
+                            "suburb": property['address']['addressLocality'] if 'addressLocality' in property['address'] else "",
                         }
                     })
                 case _:
                     print(f'{property["@type"]} not captured')
-        return output
+        return propertyList
+
+    def filterPropertyWithId(self, propertyList, page=1) -> list:
+        pagePropertyList = []
+        for property in propertyList:
+            if "propertyId" in property:
+                property['page'] = page
+                pagePropertyList.append(property)
+        return pagePropertyList

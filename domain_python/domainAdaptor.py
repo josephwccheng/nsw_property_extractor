@@ -54,10 +54,14 @@ class DomainAdaptor:
     Note: postcode search: https://www.domain.com.au/sale/?postcode=2150&excludeunderoffer=1
     '''
 
-    def getSalesListingBySuburb(self, suburb: str = "parramatta", salesFilter: SalesFilter = SalesFilter(price="")):
+    def getSalesListingBySuburb(self, suburb: str = "parramatta", salesFilter: SalesFilter = SalesFilter(price=""), page=1):
         formattedSuburb = self.suburbFormatter(suburb)
-        response = requests.get(baseURL + "sale/" + formattedSuburb +
-                                '/?excludeunderoffer=1&sort=dateupdated-desc', headers=headers)
+        # Note: sort = dateupdated-desc is sorting by the newest property
+        url = f'{baseURL}sale/{formattedSuburb}/?excludeunderoffer=1&sort=dateupdated-desc'
+        if page > 1:
+            url = url + f'{url}&page={page}'
+        print(f'url queried is: {url}')
+        response = requests.get(url, headers=headers)
         if response.status_code != 200:
             raise Exception(
                 f"status code is {response.status_code}. Could be something wrong with the suburb formatter.")
@@ -68,9 +72,21 @@ class DomainAdaptor:
     Sales Listing By Suburb
     '''
 
-    def getPropertyListing(self, propertyId: str) -> PropertyListingResp:
+    def getPropertyListing(self, url: str) -> PropertyListingResp:
+        response = requests.get(url, headers=headers)
+        if response.status_code != 200:
+            raise Exception(
+                f"status code is {response.status_code}. Could be something wrong with the url for property listing.")
+        else:
+            return response
+
+    def getPropertyListingById(self, propertyId: str) -> PropertyListingResp:
         response = requests.get(baseURL + propertyId, headers=headers)
-        return response
+        if response.status_code != 200:
+            raise Exception(
+                f"status code is {response.status_code}. Could be something wrong with the property id for property listing.")
+        else:
+            return response
 
     '''
     Helper Functions

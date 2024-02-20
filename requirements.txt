@@ -4,3 +4,4 @@ requests
 bs4
 lxml
 types-requests
+jmespath # https://jmespath.org/tutorial.html
