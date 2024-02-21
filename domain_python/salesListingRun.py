@@ -1,39 +1,43 @@
-from domainAdaptor import DomainAdaptor, SalesFilter
+from domainAdaptor import SalesFilter
 from domainSalesListing import SalesListing
+from datetime import date
 import time
 import random
 import csv
+from tqdm import tqdm
+
+baseURL = 'https://www.domain.com.au/'
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/118.0',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.5',
+    'Accept-Encoding': 'gzip, deflate, br'
+}
 
 if __name__ == "__main__":
-    inputSuburb = "PARRAMATTA".lower()
-    domainAdaptor = DomainAdaptor()
-    salesListing = SalesListing()
+    inputSuburb = "ST LEONARDS"
+    fileName = f'{inputSuburb.lower().replace(" ", "_")}_sales_list_{date.today()}.csv'
+    salesListing = SalesListing(baseURL, headers)
     # Query Domain website via the suburb
-    rawSalesListingResp = domainAdaptor.getSalesListingBySuburb(inputSuburb)
+    rawSalesListingResp = salesListing.getSalesListingBySuburb(inputSuburb)
     # Extract data from sales listing page
-    rawData = salesListing.extractRawSalesData(rawSalesListingResp)
-    digitalData = rawData['digitalData']
-    # Obtain the total pagination pages and total results of the search
-    totalPaginationPages = digitalData['totalPaginatePages']
-    totalResult = digitalData['totalResult']
-    # obtain high level property list and store it locally
-    salesList = rawData['salesList']
-    page = 1
-    allSalesList = salesListing.filterPropertyWithId(salesList, page)
-    # Loop through all pagination & obtain all sales property listing
-    for page in range(2, 10):  # totalPaginationPages
-        rawSalesListingResp = domainAdaptor.getSalesListingBySuburb(
-            inputSuburb, SalesFilter(price=""), page)
-        rawData = salesListing.extractRawSalesData(rawSalesListingResp)
-        digitalData = rawData['digitalData']
-        salesList = rawData['salesList']
-        allSalesList = allSalesList + salesListing.filterPropertyWithId(
-            salesList, page)
-        # performing a sleeper just so we dont spam domain and get banned
-        time.sleep(random.randint(1, 2))
-        print(f"page {page} extracted")
-
-    with open('step_3.csv', 'w', newline='') as output_file:
-        dict_writer = csv.DictWriter(output_file, allSalesList[0].keys())
+    salesData = salesListing.extractRawSalesData(
+        rawSalesListingResp)
+    salesSummaryData = salesData["salesSummaryData"]
+    saleList = salesData["salesList"]
+    # Create a CSV file and add the header in
+    with open(fileName, 'w', newline='') as output_file:
+        dict_writer = csv.DictWriter(output_file, saleList[0].keys())
         dict_writer.writeheader()
-        dict_writer.writerows(allSalesList)
+    # Loop through all pagination & obtain all sales property listing
+    for page in tqdm(range(2, salesSummaryData["totalPages"])):
+        rawSalesListingResp = salesListing.getSalesListingBySuburb(
+            inputSuburb, SalesFilter(price=""), page)
+        saleList = salesListing.extractRawSalesData(
+            rawSalesListingResp)['salesList']
+        with open(fileName, 'a', newline='') as output_file:
+            dict_writer = csv.DictWriter(output_file, saleList[0].keys())
+            dict_writer.writerows(salesListing.extractRawSalesData(
+                rawSalesListingResp)['salesList'])
+        # performing a sleeper just so we dont spam domain and get banned
+        time.sleep(random.randint(1, 3))

@@ -1,9 +1,8 @@
-import json
-from bs4 import BeautifulSoup
-import re
+import jmespath
+from domainAdaptor import DomainAdaptor
 
 
-class SalesListing():
+class SalesListing(DomainAdaptor):
     '''
     Domain Sales Listing page
         Inspection / Auction -> event
@@ -36,26 +35,75 @@ class SalesListing():
         '''
             Brute Force Way of obtaining object of the sales
         '''
-        resp = rawSalesListingResp.text
-        soup = BeautifulSoup(resp, 'html.parser')
-        allScripts = soup.findAll(
-            'script')
-        digitalDataSearch = "var digitalData = "
-        digitalDataScript = [
-            script.text for script in allScripts if digitalDataSearch in script.text]
-        digitalData = re.search(
-            r"({.*?});", digitalDataScript[0])  # type: ignore
-        if not digitalData:
-            raise FileNotFoundError("Could not extract the reggex phrase")
-        metaData = self.extractDigitalData(
-            json.loads(digitalData[0].rstrip(";")))
+        # Attempt 1
+        # resp = rawSalesListingResp.text
+        # soup = BeautifulSoup(resp, 'html.parser')
+        # allScripts = soup.findAll(
+        #     'script')
+        # digitalDataSearch = "var digitalData = "
+        # digitalDataScript = [
+        #     script.text for script in allScripts if digitalDataSearch in script.text]
+        # digitalData = re.search(
+        #     r"({.*?});", digitalDataScript[0])  # type: ignore
+        # if not digitalData:
+        #     raise FileNotFoundError("Could not extract the reggex phrase")
+        # digitalData = self.extractDigitalData(
+        #     json.loads(digitalData[0].rstrip(";")))
 
-        bodyTypeSearch = "application/ld+json"
-        bodyScript = soup.find('script', type=bodyTypeSearch)
-        if bodyScript == None:
-            raise FileNotFoundError("Body Script is null")
-        body = self.extractPropertyList(json.loads(bodyScript.text))
-        return {"digitalData": metaData, "salesList": body}
+        # bodyTypeSearch = "application/ld+json"
+        # bodyScript = soup.find('script', type=bodyTypeSearch)
+        # if bodyScript == None:
+        #     raise FileNotFoundError("Body Script is null")
+        # salesList = self.extractSalesList(json.loads(bodyScript.text))
+        # filteredSalesList = [
+        #     property for property in salesList if "propertyId" in property]
+        # Attempt 2
+        rawNextData = self.extractNextDataFromResp(rawSalesListingResp.text)
+        componentProps = jmespath.search(
+            "props.pageProps.componentProps", rawNextData)
+        listingsMap = componentProps["listingsMap"]
+        salesPropertyList = []
+        for propertyId in listingsMap:
+            listingType = listingsMap[propertyId]["listingType"]
+            if listingType != "listing":
+                continue
+            propertyData = listingsMap[propertyId]["listingModel"]
+            address = propertyData["address"]
+            features = propertyData["features"]
+            salesPropertyList.append({
+                "propertyId": propertyId,
+                "listingUrl": f'{self.baseURL}{propertyData["url"][1:]}',
+                "address": f'{address["street"]},{address["suburb"]},{address["state"]},{address["postcode"]}',
+                "bedrooms": features["beds"] if "beds" in features else "N/A",
+                "bathrooms": features["baths"] if "baths" in features else "N/A",
+                "parking": features["parking"] if "parking" in features else 0,
+                "propertyType": features["propertyType"],
+                "propertyTypeFormatted": features["propertyTypeFormatted"],
+                "landSize": features["landSize"],
+                "landUnit": features["landUnit"],
+                "latitude": address["lat"] if "lat" in address else "N/A",
+                "longitude": address["lng"] if "lng" in address else "N/A",
+                "price": self.extractPriceFromRawGuides(propertyData["price"]),
+                "agent": {
+                    "agents": propertyData["branding"]["agentNames"] if "branding" in propertyData else "",
+                    "agency": propertyData["branding"]["brandName"] if "branding" in propertyData else propertyData["projectName"],
+                }
+            })
+
+        # layoutProps = jmespath.search(
+        #     "props.pageProps.layoutProps", rawNextData)
+        salesSummaryData = {
+            "totalListings": componentProps["totalListings"],
+            "currentPage": componentProps["currentPage"],
+            "totalPages": componentProps["totalPages"],
+            "searchTerm": componentProps["defaultSavedSearchName"],
+            "suburb": componentProps["suburb"]["suburb"]["name"],
+            "listUrl": componentProps["listUrl"],
+            "listingType": componentProps["pageViewMetadata"]["searchRequest"]["listingType"],
+            "propertyCounts": componentProps["propertyCounts"]
+        }
+
+        return {"salesSummaryData": salesSummaryData, "salesList": salesPropertyList}
 
     def extractDigitalData(self, digitalData):
         search = digitalData["page"]["pageInfo"]["search"]
@@ -65,7 +113,7 @@ class SalesListing():
             "resultsRecord": search["resultsRecords"].split(',')
         }
 
-    def extractPropertyList(self, rawPropertyList) -> list:
+    def extractSalesList(self, rawPropertyList) -> list:
         propertyList = []
         for property in rawPropertyList[1:]:
             match property["@type"]:
@@ -102,11 +150,3 @@ class SalesListing():
                 case _:
                     print(f'{property["@type"]} not captured')
         return propertyList
-
-    def filterPropertyWithId(self, propertyList, page=1) -> list:
-        pagePropertyList = []
-        for property in propertyList:
-            if "propertyId" in property:
-                property['page'] = page
-                pagePropertyList.append(property)
-        return pagePropertyList

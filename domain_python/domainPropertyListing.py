@@ -1,27 +1,18 @@
-import json
-from bs4 import BeautifulSoup
-import re
 import jmespath
+from domainAdaptor import DomainAdaptor
 
 
-class PropertyListing():
+class PropertyListing(DomainAdaptor):
     def extractRawPropertyData(self, rawPropertyResp) -> dict:
         '''
             Brute Force Way of obtaining object of the propertyListing
         '''
-        resp = rawPropertyResp.text
-        soup = BeautifulSoup(resp, 'html.parser')
-        propertySearch = '__NEXT_DATA__'  # for landSize, long, lat
-        script = soup.find(
-            'script', id=propertySearch)
-        if not script:
-            raise FileNotFoundError(
-                f"Could not find the element {propertySearch} could be something wrong in the propertyListing")
-        payload = json.loads(script.text)
+        rawNextData = self.extractNextDataFromResp(rawPropertyResp.text)
         componentProps = jmespath.search(
-            "props.pageProps.componentProps", payload)
+            "props.pageProps.componentProps", rawNextData)
         propertyId = componentProps["listingId"]
-        layoutProps = jmespath.search("props.pageProps.layoutProps", payload)
+        layoutProps = jmespath.search(
+            "props.pageProps.layoutProps", rawNextData)
         propertyListing = componentProps["listingsMap"][str(propertyId)]
         return {"propertyId": propertyId,
                 "listingUrl": propertyListing["listingModel"]["url"],
@@ -45,9 +36,9 @@ class PropertyListing():
                 "landUnit": propertyListing["listingModel"]["features"]["landUnit"],
                 "estimatedPriceFrom": componentProps["priceGuide"]["estimatedPrice"]["from"],
                 "estimatedPriceTo": componentProps["priceGuide"]["estimatedPrice"]["to"],
-                "latitude": componentProps["map"]["latitude"],
                 "features": componentProps["features"],
                 "schoolCatchment": componentProps["schoolCatchment"],
+                "latitude": componentProps["map"]["latitude"],
                 "longitude": componentProps["map"]["longitude"],
                 "createdOn": componentProps["createdOn"],
                 "domainSays": {
