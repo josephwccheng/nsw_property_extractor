@@ -1,33 +1,15 @@
 import jmespath
-from domainAdaptor import DomainAdaptor
+from domainAdaptor import DomainAdaptor, SalesFilter
+from datetime import date
+import time
+import random
+from tqdm import tqdm
+from fileProcessing import createEmptyCsvWithHeaders, appendRowsToCsv
 
 
 class SalesListing(DomainAdaptor):
     '''
     Domain Sales Listing page
-        Inspection / Auction -> event
-        Other's wont be in the 	record, but will be in list
-    digitalData - object
-        Search = [page -> pageInfo -> search]
-        - TotalPaginatePage = [Search - resultsPages]
-        - Total Result = [Search -> searchResultCount]
-        - Data with price = [Search -> resultsRecords]
-        - Data without price = [Search -> resultsRecords1]
-    proprtyList - list[object]
-        ignore first index
-        - propertyType = [location -> @type]
-        - geoCoordinates = [location -> geo]
-            - latitude
-            - longitude
-        - address = [address]
-            - streetAddress
-            - postalCode
-            - addressLocality
-            - addressRegion
-        - name
-        - description
-        - url
-        - propertyID - obtain from end of url (reggex)
     Note: ipAddress is being tracked
     '''
 
@@ -35,29 +17,6 @@ class SalesListing(DomainAdaptor):
         '''
             Brute Force Way of obtaining object of the sales
         '''
-        # Attempt 1
-        # resp = rawSalesListingResp.text
-        # soup = BeautifulSoup(resp, 'html.parser')
-        # allScripts = soup.findAll(
-        #     'script')
-        # digitalDataSearch = "var digitalData = "
-        # digitalDataScript = [
-        #     script.text for script in allScripts if digitalDataSearch in script.text]
-        # digitalData = re.search(
-        #     r"({.*?});", digitalDataScript[0])  # type: ignore
-        # if not digitalData:
-        #     raise FileNotFoundError("Could not extract the reggex phrase")
-        # digitalData = self.extractDigitalData(
-        #     json.loads(digitalData[0].rstrip(";")))
-
-        # bodyTypeSearch = "application/ld+json"
-        # bodyScript = soup.find('script', type=bodyTypeSearch)
-        # if bodyScript == None:
-        #     raise FileNotFoundError("Body Script is null")
-        # salesList = self.extractSalesList(json.loads(bodyScript.text))
-        # filteredSalesList = [
-        #     property for property in salesList if "propertyId" in property]
-        # Attempt 2
         rawNextData = self.extractNextDataFromResp(rawSalesListingResp.text)
         componentProps = jmespath.search(
             "props.pageProps.componentProps", rawNextData)
@@ -74,24 +33,21 @@ class SalesListing(DomainAdaptor):
                 "propertyId": propertyId,
                 "listingUrl": f'{self.baseURL}{propertyData["url"][1:]}',
                 "address": f'{address["street"]},{address["suburb"]},{address["state"]},{address["postcode"]}',
+                "suburb": address["suburb"],
                 "bedrooms": features["beds"] if "beds" in features else "N/A",
                 "bathrooms": features["baths"] if "baths" in features else "N/A",
                 "parking": features["parking"] if "parking" in features else 0,
                 "propertyType": features["propertyType"],
-                "propertyTypeFormatted": features["propertyTypeFormatted"],
                 "landSize": features["landSize"],
                 "landUnit": features["landUnit"],
-                "latitude": address["lat"] if "lat" in address else "N/A",
-                "longitude": address["lng"] if "lng" in address else "N/A",
                 "price": self.extractPriceFromRawGuides(propertyData["price"]),
-                "agent": {
-                    "agents": propertyData["branding"]["agentNames"] if "branding" in propertyData else "",
-                    "agency": propertyData["branding"]["brandName"] if "branding" in propertyData else propertyData["projectName"],
-                }
+                "priceOrig": propertyData["price"],
+                "agents": propertyData["branding"]["agentNames"] if "branding" in propertyData else "",
+                "agency": propertyData["branding"]["brandName"] if "branding" in propertyData else propertyData["projectName"],
+                # "propertyTypeFormatted": features["propertyTypeFormatted"],
+                # "latitude": address["lat"] if "lat" in address else "N/A",
+                # "longitude": address["lng"] if "lng" in address else "N/A",
             })
-
-        # layoutProps = jmespath.search(
-        #     "props.pageProps.layoutProps", rawNextData)
         salesSummaryData = {
             "totalListings": componentProps["totalListings"],
             "currentPage": componentProps["currentPage"],
@@ -150,3 +106,64 @@ class SalesListing(DomainAdaptor):
                 case _:
                     print(f'{property["@type"]} not captured')
         return propertyList
+
+
+if __name__ == "__main__":
+    baseURL = 'https://www.domain.com.au/'
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/118.0',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept-Encoding': 'gzip, deflate, br'
+    }
+    # examples, chatswood, st leonards, willoughby
+    inputSuburb = input("Enter a NSW Suburb (Spelling is critical): ")
+    fileName = f'{inputSuburb.lower().replace(" ", "_")}_sales_list_{date.today()}.csv'
+    salesListing = SalesListing(baseURL, headers)
+    rawSalesListingResp = salesListing.getSalesListingBySuburb(inputSuburb)
+    salesData = salesListing.extractRawSalesData(
+        rawSalesListingResp)
+    salesSummaryData = salesData["salesSummaryData"]
+    saleList = salesData["salesList"]
+
+    createEmptyCsvWithHeaders(fileName, saleList[0].keys())
+    appendRowsToCsv(fileName, saleList[0].keys(), saleList)
+    # Loop through all pagination & obtain all sales property listing
+    for page in tqdm(range(2, salesSummaryData["totalPages"] + 1)):
+        rawSalesListingResp = salesListing.getSalesListingBySuburb(
+            inputSuburb, SalesFilter(price=""), page)
+        saleList = salesListing.extractRawSalesData(
+            rawSalesListingResp)['salesList']
+        appendRowsToCsv(fileName, saleList[0].keys(), saleList)
+        # performing a sleeper just so we dont spam domain and get banned
+        time.sleep(random.randint(1, 3))
+
+    print(f"completed with sales summary data: {salesSummaryData}")
+
+
+'''
+Backup codes
+    Attempt 1
+    # resp = rawSalesListingResp.text
+    # soup = BeautifulSoup(resp, 'html.parser')
+    # allScripts = soup.findAll(
+    #     'script')
+    # digitalDataSearch = "var digitalData = "
+    # digitalDataScript = [
+    #     script.text for script in allScripts if digitalDataSearch in script.text]
+    # digitalData = re.search(
+    #     r"({.*?});", digitalDataScript[0])  # type: ignore
+    # if not digitalData:
+    #     raise FileNotFoundError("Could not extract the reggex phrase")
+    # digitalData = self.extractDigitalData(
+    #     json.loads(digitalData[0].rstrip(";")))
+
+    # bodyTypeSearch = "application/ld+json"
+    # bodyScript = soup.find('script', type=bodyTypeSearch)
+    # if bodyScript == None:
+    #     raise FileNotFoundError("Body Script is null")
+    # salesList = self.extractSalesList(json.loads(bodyScript.text))
+    # filteredSalesList = [
+    #     property for property in salesList if "propertyId" in property]
+
+'''

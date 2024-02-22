@@ -3,8 +3,9 @@ from domainSalesListing import SalesListing
 from datetime import date
 import time
 import random
-import csv
 from tqdm import tqdm
+
+from fileProcessing import createEmptyCsvWithHeaders, appendRowsToCsv
 
 baseURL = 'https://www.domain.com.au/'
 headers = {
@@ -14,30 +15,29 @@ headers = {
     'Accept-Encoding': 'gzip, deflate, br'
 }
 
+pricing = {"0-300000": "min", "300001-1000000": "50000", "1000001-3000000": "100000",
+           "3000001-5000000": "250000", "5000001-12000000": "500000", "12000000-any": "max"}
 if __name__ == "__main__":
-    inputSuburb = "ST LEONARDS"
+    # examples, chatswood, st leonards, willoughby
+    inputSuburb = input("Enter a NSW Suburb (Spelling is critical): ")
     fileName = f'{inputSuburb.lower().replace(" ", "_")}_sales_list_{date.today()}.csv'
     salesListing = SalesListing(baseURL, headers)
-    # Query Domain website via the suburb
     rawSalesListingResp = salesListing.getSalesListingBySuburb(inputSuburb)
-    # Extract data from sales listing page
     salesData = salesListing.extractRawSalesData(
         rawSalesListingResp)
     salesSummaryData = salesData["salesSummaryData"]
     saleList = salesData["salesList"]
-    # Create a CSV file and add the header in
-    with open(fileName, 'w', newline='') as output_file:
-        dict_writer = csv.DictWriter(output_file, saleList[0].keys())
-        dict_writer.writeheader()
+
+    createEmptyCsvWithHeaders(fileName, saleList[0].keys())
+    appendRowsToCsv(fileName, saleList[0].keys(), saleList)
     # Loop through all pagination & obtain all sales property listing
-    for page in tqdm(range(2, salesSummaryData["totalPages"])):
+    for page in tqdm(range(2, salesSummaryData["totalPages"] + 1)):
         rawSalesListingResp = salesListing.getSalesListingBySuburb(
             inputSuburb, SalesFilter(price=""), page)
         saleList = salesListing.extractRawSalesData(
             rawSalesListingResp)['salesList']
-        with open(fileName, 'a', newline='') as output_file:
-            dict_writer = csv.DictWriter(output_file, saleList[0].keys())
-            dict_writer.writerows(salesListing.extractRawSalesData(
-                rawSalesListingResp)['salesList'])
+        appendRowsToCsv(fileName, saleList[0].keys(), saleList)
         # performing a sleeper just so we dont spam domain and get banned
         time.sleep(random.randint(1, 3))
+
+    print(f"completed with sales summary data: {salesSummaryData}")

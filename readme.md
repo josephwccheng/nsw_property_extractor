@@ -37,3 +37,33 @@
 5. [Multiprocessing with Python](https://medium.com/geekculture/python-multiprocessing-with-output-to-file-a6748a27ed41)
 6. [Python Web Scrapper](https://realpython.com/python-web-scraping-practical-introduction/)
 7. [NSW Postcodes](https://www.dva.gov.au/sites/default/files/Providers/nsworp.pdf)
+8. [Headers and Cookies for Web Scraping](https://www.scraperapi.com/blog/headers-and-cookies-for-web-scraping/)
+9. [Web Scraping best Practices](https://www.scraperapi.com/blog/web-scraping-best-practices/)
+10. [10 tips for web scraping](https://www.scraperapi.com/blog/10-tips-for-web-scraping/)
+
+## Anti-scraping Techniques
+
+- number of requests: too many requests within a particular time frame or there are too many parallel requests from the same IP
+- number of repetitions and find request patterns (X number of requests at every Y seconds)
+- Honeypots are link traps webmasters can add to the HTML file that are hidden from humans
+- Redirecting the request to a page with a CAPTCHA
+- javascript checks
+- anti-bot mechanisms can spot patterns in the number of clicks, clicks’ location, the interval between clicks, and other metrics
+
+## Todos
+
+- Set Your Timeout to at Least 60 seconds
+- Don’t Set Custom Headers Unless You 100% Need To
+- Always Send Your Requests to the HTTPS Version
+- Avoid Using Sessions Unless Completely Necessary
+- Manage Your Concurrency Properly
+- Verify if You Need Geotargeting Before Running Your Scraper
+- If you want to be able to interact with the page (click on a button, scroll, etc.) then you will need to use your own Selenium, Puppeteer, or Nightmare headless browser
+
+## Tips
+
+- Set Random Intervals In Between Your Requests
+- Set a Referrer
+- Use a Headless Browser
+- Avoid Honeypot Traps
+- Detect Website Changes

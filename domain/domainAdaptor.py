@@ -21,6 +21,8 @@ class SalesFilter:
     bedrooms: Optional[str] = None
     carspaces: Optional[str] = None
     bathrooms: Optional[str] = None
+    sortNewest: Optional[bool] = True
+    suburbExclusive: Optional[bool] = True
 
 
 # Type Aliasing - https://docs.python.org/3/library/typing.html
@@ -50,10 +52,15 @@ class DomainAdaptor:
     Note: postcode search: https://www.domain.com.au/sale/?postcode=2150&excludeunderoffer=1
     '''
 
-    def getSalesListingBySuburb(self, suburb: str = "parramatta", salesFilter: SalesFilter = SalesFilter(price=""), page=1):
+    def getSalesListingBySuburb(self, suburb: str = "parramatta", salesFilter: SalesFilter = SalesFilter(price="", sortNewest=True, suburbExclusive=True), page=1):
         formattedSuburb = self.suburbFormatter(suburb)
         # Note: sort = dateupdated-desc is sorting by the newest property
-        url = f'{self.baseURL}sale/{formattedSuburb}/?excludeunderoffer=1&sort=dateupdated-desc'
+        # there's some funny thing going on with &lastsearchdate=2024-02-22t16:09:09.740z
+        url = f'{self.baseURL}sale/{formattedSuburb}/?excludeunderoffer=1'
+        if salesFilter.sortNewest:
+            url = f'{url}&sort=dateupdated-desc'
+        if salesFilter.suburbExclusive:
+            url = f'{url}&ssubs=0'
         if page > 1:
             url = url + f'{url}&page={page}'
         response = requests.get(url, headers=self.headers)
@@ -63,7 +70,7 @@ class DomainAdaptor:
         else:
             return response
 
-    def getPropertyListing(self, url: str) -> PropertyListingResp:
+    def get(self, url: str):
         response = requests.get(url, headers=self.headers)
         if response.status_code != 200:
             raise Exception(
