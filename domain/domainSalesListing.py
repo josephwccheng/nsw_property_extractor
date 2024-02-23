@@ -132,7 +132,7 @@ if __name__ == "__main__":
     # Loop through all pagination & obtain all sales property listing
     for page in tqdm(range(2, salesSummaryData["totalPages"] + 1)):
         rawSalesListingResp = salesListing.getSalesListingBySuburb(
-            inputSuburb, SalesFilter(price=""), page)
+            inputSuburb, page=2)
         saleList = salesListing.extractRawSalesData(
             rawSalesListingResp)['salesList']
         appendRowsToCsv(fileName, saleList[0].keys(), saleList)
