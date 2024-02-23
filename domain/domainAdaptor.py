@@ -17,7 +17,7 @@ filters - empty for all prices, <num>-<num> for range, and <num>-any for above
 
 @dataclass
 class SalesFilter:
-    price: Optional[str] = None
+    price: Optional[int] = None
     bedrooms: Optional[str] = None
     carspaces: Optional[str] = None
     bathrooms: Optional[str] = None
@@ -33,7 +33,7 @@ RawNextResp: TypeAlias = object
 
 def loadNSWPostcodes():
     nswPostcodes = {}
-    with open("./domain_python/nsw_postcode.csv", "r") as file:
+    with open("./domain/nsw_postcode.csv", "r") as file:
         reader = csv.DictReader(file)
         for row in reader:
             locality = str(row['locality']).lower()
@@ -46,24 +46,37 @@ class DomainAdaptor:
         self.baseURL = baseURL
         self.headers = headers
         self.nswPostcodes = loadNSWPostcodes()
+        self.priceFilterMapping = {
+            "300000-1000000": 50000,
+            "1000000-3000000": 100000,
+            "3000000-5000000": 250000,
+            "5000000-12000000": 500000,
+        }
+        self.nextIncrement = None
+        self.priceRange = None
 
     '''
     Sales Listing By Suburb
     Note: postcode search: https://www.domain.com.au/sale/?postcode=2150&excludeunderoffer=1
     '''
 
-    def getSalesListingBySuburb(self, suburb: str = "parramatta", salesFilter: SalesFilter = SalesFilter(price="", sortNewest=True, suburbExclusive=True), page=1):
+    def getSalesListingBySuburb(self, suburb: str = "parramatta", salesFilter: SalesFilter = SalesFilter(sortNewest=True, suburbExclusive=True), page=1):
         formattedSuburb = self.suburbFormatter(suburb)
         # Note: sort = dateupdated-desc is sorting by the newest property
         # there's some funny thing going on with &lastsearchdate=2024-02-22t16:09:09.740z
         url = f'{self.baseURL}sale/{formattedSuburb}/?excludeunderoffer=1'
+        if salesFilter.price:
+            self.priceRange = self.priceRangeCalc(salesFilter.price)
+            url = f'{url}&price={self.priceRange}'
         if salesFilter.sortNewest:
             url = f'{url}&sort=dateupdated-desc'
         if salesFilter.suburbExclusive:
             url = f'{url}&ssubs=0'
         if page > 1:
             url = url + f'{url}&page={page}'
+        print(f'url is {url}')
         response = requests.get(url, headers=self.headers)
+
         if response.status_code != 200:
             raise Exception(
                 f"status code is {response.status_code}. Could be something wrong with the suburb formatter.")
@@ -84,6 +97,19 @@ class DomainAdaptor:
         if response.status_code != 200:
             raise Exception(
                 f"status code is {response.status_code}. Could be something wrong with the property id for property listing.")
+        else:
+            return response
+
+    def getSoldListingBySuburb(self, suburb: str = "parramatta", page=1):
+        formattedSuburb = self.suburbFormatter(suburb)
+        # Note: default sorted by sales date
+        url = f'{self.baseURL}sold-listings/{formattedSuburb}/house/?excludepricewithheld=1'
+        if page > 1:
+            url = url + f'{url}&page={page}'
+        response = requests.get(url, headers=self.headers)
+        if response.status_code != 200:
+            raise Exception(
+                f"status code is {response.status_code}. Could be something wrong with the suburb formatter.")
         else:
             return response
 
@@ -116,6 +142,23 @@ class DomainAdaptor:
             price = '-'.join(prices)
         return price
 
+    def priceRangeCalc(self, price: int, priceMin=300000, priceMax=12000000) -> str:
+        if price < priceMin:
+            self.nextIncrement = 0
+            return f'0-{priceMin}'
+        elif price >= priceMax:
+            self.nextIncrement = 0
+            return f'{priceMax}-any'
+        keys = self.priceFilterMapping.keys()
+        for key in keys:
+            lowerRange, upperRange = key.split('-')
+            if price >= int(lowerRange) and price < int(upperRange):
+                self.nextIncrement = int(self.priceFilterMapping[key])
+                lowerBound = price
+                upperBound = price + self.nextIncrement - 1
+                return f'{lowerBound}-{upperBound}'
+        raise ValueError("Price range value is not correct")
+
 
 if __name__ == "__main__":
     baseURL = 'https://www.domain.com.au/'
@@ -126,6 +169,8 @@ if __name__ == "__main__":
         'Accept-Encoding': 'gzip, deflate, br'
     }
     doaminAdaptor = DomainAdaptor(baseURL, headers)
+    salesListing = doaminAdaptor.getSalesListingBySuburb(
+        "parramatta", SalesFilter(price=0, sortNewest=True, suburbExclusive=True))
     salesListing = doaminAdaptor.getSalesListingBySuburb()
     propertyListing = doaminAdaptor.getPropertyListingById("2018791254")
     print("script completed")

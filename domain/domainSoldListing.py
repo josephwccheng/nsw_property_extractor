@@ -1,5 +1,5 @@
 import jmespath
-from domainAdaptor import DomainAdaptor, SalesFilter
+from domainAdaptor import DomainAdaptor
 from datetime import date
 import time
 import random
@@ -7,21 +7,21 @@ from tqdm import tqdm
 from fileProcessing import createEmptyCsvWithHeaders, appendRowsToCsv
 
 
-class SalesListing(DomainAdaptor):
+class SoldListing(DomainAdaptor):
     '''
-    Domain Sales Listing page
+    Domain Sold Listing page
     Note: ipAddress is being tracked
     '''
 
-    def extractRawSalesData(self, rawSalesListingResp) -> dict:
+    def extractRawSoldData(self, rawsoldListingResp) -> dict:
         '''
-            Brute Force Way of obtaining object of the sales
+            Brute Force Way of obtaining object of the sold
         '''
-        rawNextData = self.extractNextDataFromResp(rawSalesListingResp.text)
+        rawNextData = self.extractNextDataFromResp(rawsoldListingResp.text)
         componentProps = jmespath.search(
             "props.pageProps.componentProps", rawNextData)
         listingsMap = componentProps["listingsMap"]
-        salesPropertyList = []
+        soldPropertyList = []
         for propertyId in listingsMap:
             listingType = listingsMap[propertyId]["listingType"]
             if listingType != "listing":
@@ -29,7 +29,7 @@ class SalesListing(DomainAdaptor):
             propertyData = listingsMap[propertyId]["listingModel"]
             address = propertyData["address"]
             features = propertyData["features"]
-            salesPropertyList.append({
+            soldPropertyList.append({
                 "propertyId": propertyId,
                 "listingUrl": f'{self.baseURL}{propertyData["url"][1:]}',
                 "address": f'{address["street"]},{address["suburb"]},{address["state"]},{address["postcode"]}',
@@ -48,18 +48,18 @@ class SalesListing(DomainAdaptor):
                 # "latitude": address["lat"] if "lat" in address else "N/A",
                 # "longitude": address["lng"] if "lng" in address else "N/A",
             })
-        salesSummaryData = {
+        soldSummaryData = {
             "totalListings": componentProps["totalListings"],
             "currentPage": componentProps["currentPage"],
             "totalPages": componentProps["totalPages"],
             "searchTerm": componentProps["defaultSavedSearchName"],
-            "suburb": componentProps["suburb"]["suburb"]["name"],
+            "suburb": componentProps["suburb"]["suburb"]["name"] if "suburb" in componentProps["suburb"] else "",
             "listUrl": componentProps["listUrl"],
             "listingType": componentProps["pageViewMetadata"]["searchRequest"]["listingType"],
             "propertyCounts": componentProps["propertyCounts"]
         }
 
-        return {"salesSummaryData": salesSummaryData, "salesList": salesPropertyList}
+        return {"soldSummaryData": soldSummaryData, "soldList": soldPropertyList}
 
     def extractDigitalData(self, digitalData):
         search = digitalData["page"]["pageInfo"]["search"]
@@ -69,7 +69,7 @@ class SalesListing(DomainAdaptor):
             "resultsRecord": search["resultsRecords"].split(',')
         }
 
-    def extractSalesList(self, rawPropertyList) -> list:
+    def extractsoldList(self, rawPropertyList) -> list:
         propertyList = []
         for property in rawPropertyList[1:]:
             match property["@type"]:
@@ -118,33 +118,32 @@ if __name__ == "__main__":
     }
     # examples, chatswood, st leonards, willoughby
     inputSuburb = input("Enter a NSW Suburb (Spelling is critical): ")
-    fileName = f'{inputSuburb.lower().replace(" ", "_")}_sales_list_{date.today()}.csv'
-    salesListing = SalesListing(baseURL, headers)
-    rawSalesListingResp = salesListing.getSalesListingBySuburb(inputSuburb)
-    salesData = salesListing.extractRawSalesData(
-        rawSalesListingResp)
-    salesSummaryData = salesData["salesSummaryData"]
-    saleList = salesData["salesList"]
-
-    createEmptyCsvWithHeaders(fileName, saleList[0].keys())
-    appendRowsToCsv(fileName, saleList[0].keys(), saleList)
-    # Loop through all pagination & obtain all sales property listing
-    for page in tqdm(range(2, salesSummaryData["totalPages"] + 1)):
-        rawSalesListingResp = salesListing.getSalesListingBySuburb(
-            inputSuburb, SalesFilter(price=""), page)
-        saleList = salesListing.extractRawSalesData(
-            rawSalesListingResp)['salesList']
-        appendRowsToCsv(fileName, saleList[0].keys(), saleList)
+    fileName = f'{inputSuburb.lower().replace(" ", "_")}_sold_list_{date.today()}.csv'
+    soldListing = SoldListing(baseURL, headers)
+    rawSoldListingResp = soldListing.getSoldListingBySuburb(inputSuburb)
+    soldData = soldListing.extractRawSoldData(
+        rawSoldListingResp)
+    soldSummaryData = soldData["soldSummaryData"]
+    soldList = soldData["soldList"]
+    createEmptyCsvWithHeaders(fileName, soldList[0].keys())
+    appendRowsToCsv(fileName, soldList[0].keys(), soldList)
+    # Loop through all pagination & obtain all sold property listing
+    for page in tqdm(range(2, soldSummaryData["totalPages"] + 1)):
+        rawSoldListingResp = soldListing.getSoldListingBySuburb(
+            inputSuburb, page)
+        soldList = soldListing.extractRawSoldData(
+            rawSoldListingResp)['soldList']
+        appendRowsToCsv(fileName, soldList[0].keys(), soldList)
         # performing a sleeper just so we dont spam domain and get banned
         time.sleep(random.randint(1, 3))
 
-    print(f"completed with sales summary data: {salesSummaryData}")
+    print(f"completed with sold summary data: {soldSummaryData}")
 
 
 '''
 Backup codes
     Attempt 1
-    # resp = rawSalesListingResp.text
+    # resp = rawsoldListingResp.text
     # soup = BeautifulSoup(resp, 'html.parser')
     # allScripts = soup.findAll(
     #     'script')
@@ -162,8 +161,8 @@ Backup codes
     # bodyScript = soup.find('script', type=bodyTypeSearch)
     # if bodyScript == None:
     #     raise FileNotFoundError("Body Script is null")
-    # salesList = self.extractSalesList(json.loads(bodyScript.text))
-    # filteredSalesList = [
-    #     property for property in salesList if "propertyId" in property]
+    # soldList = self.extractsoldList(json.loads(bodyScript.text))
+    # filteredsoldList = [
+    #     property for property in soldList if "propertyId" in property]
 
 '''

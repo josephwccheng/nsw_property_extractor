@@ -40,6 +40,7 @@ class SalesListing(DomainAdaptor):
                 "propertyType": features["propertyType"],
                 "landSize": features["landSize"],
                 "landUnit": features["landUnit"],
+                "priceRange": self.priceRange,
                 "price": self.extractPriceFromRawGuides(propertyData["price"]),
                 "priceOrig": propertyData["price"],
                 "agents": propertyData["branding"]["agentNames"] if "branding" in propertyData else "",

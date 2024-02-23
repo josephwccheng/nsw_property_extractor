@@ -15,29 +15,39 @@ headers = {
     'Accept-Encoding': 'gzip, deflate, br'
 }
 
-pricing = {"0-300000": "min", "300001-1000000": "50000", "1000001-3000000": "100000",
-           "3000001-5000000": "250000", "5000001-12000000": "500000", "12000000-any": "max"}
+
+def getSalesDataAndSaveToCSV(inputSuburb: str, priceIndex: int, fileName: str, fileCreated: bool, page: int):
+    rawSalesListingResp = salesListing.getSalesListingBySuburb(
+        inputSuburb, SalesFilter(price=priceIndex), page)
+    salesData = salesListing.extractRawSalesData(
+        rawSalesListingResp)
+    saleList = salesData["salesList"]
+    if not fileCreated and len(saleList) > 0:
+        createEmptyCsvWithHeaders(fileName, saleList[0].keys())
+        fileCreated = True
+    elif len(saleList) > 0:
+        appendRowsToCsv(fileName, saleList[0].keys(), saleList)
+    return salesData, fileCreated
+
+
 if __name__ == "__main__":
     # examples, chatswood, st leonards, willoughby
     inputSuburb = input("Enter a NSW Suburb (Spelling is critical): ")
-    fileName = f'{inputSuburb.lower().replace(" ", "_")}_sales_list_{date.today()}.csv'
+    priceIndex = int(input("Enter an appropriate minimum price: "))
+    fileName = f'./data/{inputSuburb.lower().replace(" ", "_")}_sales_list_{date.today()}.csv'
+    fileCreated = False
     salesListing = SalesListing(baseURL, headers)
-    rawSalesListingResp = salesListing.getSalesListingBySuburb(inputSuburb)
-    salesData = salesListing.extractRawSalesData(
-        rawSalesListingResp)
-    salesSummaryData = salesData["salesSummaryData"]
-    saleList = salesData["salesList"]
+    while salesListing.nextIncrement != 0:  # loops through all the price ranges
+        salesData, fileCreated = getSalesDataAndSaveToCSV(
+            inputSuburb, priceIndex, fileName, fileCreated, 1)
+        salesSummaryData = salesData["salesSummaryData"]
 
-    createEmptyCsvWithHeaders(fileName, saleList[0].keys())
-    appendRowsToCsv(fileName, saleList[0].keys(), saleList)
-    # Loop through all pagination & obtain all sales property listing
-    for page in tqdm(range(2, salesSummaryData["totalPages"] + 1)):
-        rawSalesListingResp = salesListing.getSalesListingBySuburb(
-            inputSuburb, SalesFilter(price=""), page)
-        saleList = salesListing.extractRawSalesData(
-            rawSalesListingResp)['salesList']
-        appendRowsToCsv(fileName, saleList[0].keys(), saleList)
-        # performing a sleeper just so we dont spam domain and get banned
-        time.sleep(random.randint(1, 3))
+        # Loop through all pagination & obtain all sales property listing
+        for page in tqdm(range(2, salesSummaryData["totalPages"] + 1)):
+            getSalesDataAndSaveToCSV(
+                inputSuburb, priceIndex, fileName, fileCreated, page)
+            # performing a sleeper just so we dont spam domain and get banned
+            time.sleep(random.randint(1, 2))
 
-    print(f"completed with sales summary data: {salesSummaryData}")
+        priceIndex = priceIndex + \
+            salesListing.nextIncrement if salesListing.nextIncrement is not None else 0
