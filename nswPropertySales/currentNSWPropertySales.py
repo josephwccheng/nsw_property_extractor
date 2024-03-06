@@ -8,7 +8,7 @@ from abc import ABC, abstractmethod
 import warnings
 import csv
 
-NSW_DISTRICT_CODE_TO_COUNCIL = "./nswvaluergeneral/nsw_district_code.csv"
+NSW_DISTRICT_CODE_TO_COUNCIL = "./nsw_district_code.csv"
 district_code_mapping = {}
 with open(NSW_DISTRICT_CODE_TO_COUNCIL, "r") as f:
     reader = csv.reader(f)
@@ -95,6 +95,7 @@ class Property_Data_Type:
     nature_of_property: str
     primary_purpose: str
     legal_description: str
+    dealing_number: str
 
 
 class Extractor(ABC):
@@ -324,7 +325,7 @@ def read_nswvalue_dat_file(filename: str):
             purchase_price=addressSales.purchase_price,
             address=f'{addressSales.property_unit_number + "/" + addressSales.property_house_number if addressSales.property_unit_number != "" else addressSales.property_house_number} {addressSales.property_street_name}, {addressSales.property_locality}',
             post_code=addressSales.property_post_code,
-            property_type="unit" if addressSales.property_unit_number != "" else "house",
+            property_type="unit" if addressSales.strata_lot_number != "" else "house",
             strata_lot_number=addressSales.strata_lot_number,
             property_name=addressSales.property_name,
             area=addressSales.area,
@@ -334,7 +335,8 @@ def read_nswvalue_dat_file(filename: str):
             zoning=addressSales.zoning,
             nature_of_property=addressSales.nature_of_property,
             primary_purpose=addressSales.primary_purpose,
-            legal_description=description.property_legal_desc
+            legal_description=description.property_legal_desc,
+            dealing_number=addressSales.dealing_number
         )
         results.append(data.__dict__)
     return {"data": results, "version": "current"}
@@ -342,6 +344,6 @@ def read_nswvalue_dat_file(filename: str):
 
 if __name__ == '__main__':
     print("Typing for nsw value general (2001 onwards)")
-    file = "./nswvaluergeneral/data/nsw/valuegeneral/2013/November 04, 2013 (NNME)/092_SALES_DATA_NNME_04112013.DAT"
+    file = "./data/NSW_Property_Sales_Data/2013/November 04, 2013 (NNME)/092_SALES_DATA_NNME_04112013.DAT"
     result = read_nswvalue_dat_file(file)
     print("testing complete")

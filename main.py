@@ -1,6 +1,6 @@
 import glob
-from current_nswvaluegeneral import Property_Data_Type, read_nswvalue_dat_file
-from archived_nswvaluegeneral import Archived_Property_Data_Type, read_archived_nswvalue_dat_file
+from nswPropertySales.currentNSWPropertySales import Property_Data_Type, read_nswvalue_dat_file
+from nswPropertySales.archivedNSWPropertySales import Archived_Property_Data_Type, read_archived_nswvalue_dat_file
 from typing import List
 import multiprocessing as mp
 from multiprocessing import Queue
@@ -10,9 +10,8 @@ from dataclasses import dataclass
 from tqdm import tqdm
 
 # global variables
-NSW_PROPERTY_DATA_OUTPUT = "nsw_property_data.csv"
-NSW_PROPERTY_ARCHIVED_DATA_OUTPUT = "nsw_property_archived_data.csv"
-NSW_DISTRICT_CODE_TO_COUNCIL = "nsw_district_code.csv"
+NSW_PROPERTY_DATA_OUTPUT = "./output/nsw_property_sales_data.csv"
+NSW_PROPERTY_ARCHIVED_DATA_OUTPUT = "./output/nsw_property_sales_archived_data.csv"
 NSW_VALUE_GENERAL_FILE_PATH = "./data/nsw/valuegeneral/"
 DAT_FORMAT = "*.DAT"
 

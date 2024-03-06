@@ -31,15 +31,16 @@
 ## Resources
 
 1. [Australian property heat map application](https://heatmaps.com.au/)
-2. [NSW data source](https://valuation.property.nsw.gov.au/embed/propertySalesInformation)
-3. [NSW raw data fields](https://www.valuergeneral.nsw.gov.au/__data/assets/pdf_file/0015/216402/Current_Property_Sales_Data_File_Format_2001_to_Current.pdf)
-4. [NSW fields descirption](https://www.valuergeneral.nsw.gov.au/__data/assets/pdf_file/0016/216403/Property_Sales_Data_File_-_Data_Elements_V3.pdf)
-5. [Multiprocessing with Python](https://medium.com/geekculture/python-multiprocessing-with-output-to-file-a6748a27ed41)
-6. [Python Web Scrapper](https://realpython.com/python-web-scraping-practical-introduction/)
-7. [NSW Postcodes](https://www.dva.gov.au/sites/default/files/Providers/nsworp.pdf)
-8. [Headers and Cookies for Web Scraping](https://www.scraperapi.com/blog/headers-and-cookies-for-web-scraping/)
-9. [Web Scraping best Practices](https://www.scraperapi.com/blog/web-scraping-best-practices/)
-10. [10 tips for web scraping](https://www.scraperapi.com/blog/10-tips-for-web-scraping/)
+2. [NSW Property Sales Information](https://valuation.property.nsw.gov.au/embed/propertySalesInformation)
+3. [NSW Bulk Landv Value Information](https://www.valuergeneral.nsw.gov.au/land_value_summaries/lv.php)
+4. [NSW raw data fields](https://www.valuergeneral.nsw.gov.au/__data/assets/pdf_file/0015/216402/Current_Property_Sales_Data_File_Format_2001_to_Current.pdf)
+5. [NSW fields descirption](https://www.valuergeneral.nsw.gov.au/__data/assets/pdf_file/0016/216403/Property_Sales_Data_File_-_Data_Elements_V3.pdf)
+6. [Multiprocessing with Python](https://medium.com/geekculture/python-multiprocessing-with-output-to-file-a6748a27ed41)
+7. [Python Web Scrapper](https://realpython.com/python-web-scraping-practical-introduction/)
+8. [NSW Postcodes](https://www.dva.gov.au/sites/default/files/Providers/nsworp.pdf)
+9. [Headers and Cookies for Web Scraping](https://www.scraperapi.com/blog/headers-and-cookies-for-web-scraping/)
+10. [Web Scraping best Practices](https://www.scraperapi.com/blog/web-scraping-best-practices/)
+11. [10 tips for web scraping](https://www.scraperapi.com/blog/10-tips-for-web-scraping/)
 
 ## Anti-scraping Techniques
 

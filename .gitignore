@@ -1,5 +1,4 @@
 env
-data
 test
 .vscode
 __pycache__/
@@ -8,3 +7,8 @@ output
 node_modules/
 .DS_Store
 *.csv
+!nsw_district_code.csv
+*.txt
+**/*.DAT
+**/creative_commons.txt
+*.zip

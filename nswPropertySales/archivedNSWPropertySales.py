@@ -8,7 +8,7 @@ from abc import ABC, abstractmethod
 import warnings
 import csv
 
-NSW_DISTRICT_CODE_TO_COUNCIL = "nsw_district_code.csv"
+NSW_DISTRICT_CODE_TO_COUNCIL = "./nsw_district_code.csv"
 district_code_mapping = {}
 with open(NSW_DISTRICT_CODE_TO_COUNCIL, "r") as f:
     reader = csv.reader(f)
