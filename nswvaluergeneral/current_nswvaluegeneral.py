@@ -8,7 +8,7 @@ from abc import ABC, abstractmethod
 import warnings
 import csv
 
-NSW_DISTRICT_CODE_TO_COUNCIL = "nsw_district_code.csv"
+NSW_DISTRICT_CODE_TO_COUNCIL = "./nswvaluergeneral/nsw_district_code.csv"
 district_code_mapping = {}
 with open(NSW_DISTRICT_CODE_TO_COUNCIL, "r") as f:
     reader = csv.reader(f)
@@ -91,6 +91,7 @@ class Property_Data_Type:
     area_type: str
     contract_date: str
     settlement_date: str
+    zoning: str
     nature_of_property: str
     primary_purpose: str
     legal_description: str
@@ -330,6 +331,7 @@ def read_nswvalue_dat_file(filename: str):
             area_type=addressSales.area_type,
             settlement_date=datetime.strptime(addressSales.settlement_date, "%Y%m%d").isoformat(
             ).split("T")[0] if addressSales.settlement_date != "" else addressSales.settlement_date,
+            zoning=addressSales.zoning,
             nature_of_property=addressSales.nature_of_property,
             primary_purpose=addressSales.primary_purpose,
             legal_description=description.property_legal_desc
