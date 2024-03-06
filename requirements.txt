@@ -1,8 +1,7 @@
 tqdm
-multiprocessing
 requests
 bs4
 lxml
 types-requests
 pandas
-jmespath # https://jmespath.org/tutorial.html
+jmespath

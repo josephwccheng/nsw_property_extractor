@@ -12,7 +12,7 @@ from tqdm import tqdm
 # global variables
 NSW_PROPERTY_DATA_OUTPUT = "./output/nsw_property_sales_data.csv"
 NSW_PROPERTY_ARCHIVED_DATA_OUTPUT = "./output/nsw_property_sales_archived_data.csv"
-NSW_VALUE_GENERAL_FILE_PATH = "./data/nsw/valuegeneral/"
+NSW_VALUE_GENERAL_FILE_PATH = "./data/NSW_Property_Sales_Data"
 DAT_FORMAT = "*.DAT"
 
 
@@ -55,10 +55,10 @@ def property_file_searcher(root_dir: str, file_format: str) -> List[propertyFile
         for dirname in dirnames:
             subdir_path = os.path.join(dirpath, dirname)
             ''' This is dependant on the file having the right folder name of numbers based on year
-            data saved in data/nsw/valuegeneral/<xxyearxx>/ 
+            data saved in data/NSW_Property_Sales_Data/<xxyearxx>/ 
             Therefore we take the 4th element when splitting
             '''
-            year = int(subdir_path.split('/')[4][0:4])
+            year = int(subdir_path.split('/')[3][0:4])
             subdir_dat_files = glob.glob(
                 os.path.join(subdir_path, file_format))
             subdir_property_metadata_list = [propertyFileMetadata(
