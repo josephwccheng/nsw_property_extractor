@@ -213,7 +213,7 @@ def read_archived_nswvalue_dat_file(filename: str):
             contract_date=datetime.strptime(
                 addressSales.contract_date, "%d/%m/%Y").isoformat().split("T")[0],
             purchase_price=addressSales.purchase_price,
-            address=f'{addressSales.property_unit_number + "/" + addressSales.property_house_number if addressSales.property_unit_number != "" else addressSales.property_house_number} {addressSales.property_street_name}, {addressSales.property_suburb_name}',
+            address=f'{addressSales.property_unit_number + "/" if addressSales.property_unit_number != "" else ""}{addressSales.property_house_number if addressSales.property_house_number else ""} {addressSales.property_street_name}, {addressSales.property_suburb_name}',
             post_code=addressSales.property_post_code,
             property_type="unit" if addressSales.property_unit_number != "" else "house",
             area=addressSales.area,

@@ -2,6 +2,8 @@
 
 **Date**: 24/04/2023
 
+**Last Updated**: 06/03/2024
+
 **Author**: Joseph Cheng
 
 **Programming Language**: Python3.8 and above
@@ -32,7 +34,7 @@
 
 1. [Australian property heat map application](https://heatmaps.com.au/)
 2. [NSW Property Sales Information](https://valuation.property.nsw.gov.au/embed/propertySalesInformation)
-3. [NSW Bulk Landv Value Information](https://www.valuergeneral.nsw.gov.au/land_value_summaries/lv.php)
+3. [NSW Bulk Land Value Information](https://www.valuergeneral.nsw.gov.au/land_value_summaries/lv.php)
 4. [NSW raw data fields](https://www.valuergeneral.nsw.gov.au/__data/assets/pdf_file/0015/216402/Current_Property_Sales_Data_File_Format_2001_to_Current.pdf)
 5. [NSW fields descirption](https://www.valuergeneral.nsw.gov.au/__data/assets/pdf_file/0016/216403/Property_Sales_Data_File_-_Data_Elements_V3.pdf)
 6. [Multiprocessing with Python](https://medium.com/geekculture/python-multiprocessing-with-output-to-file-a6748a27ed41)

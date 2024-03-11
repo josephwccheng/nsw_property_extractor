@@ -9,6 +9,14 @@ import os
 from dataclasses import dataclass
 from tqdm import tqdm
 
+'''
+This script is intended to loop through all the *.DAT files "from NSW Property Sales Information" and tabulate the data into a CSV file consumable for humans
+Some observations of what's lacking in this data source:
+    1. Some addresses were missing even though the property sales record is there (i.e. the unit number is missing)
+    2. There is no information on the # of bedrooms, bathrooms, carparks ... etc.
+'''
+
+
 # global variables
 NSW_PROPERTY_DATA_OUTPUT = "./output/nsw_property_sales_data.csv"
 NSW_PROPERTY_ARCHIVED_DATA_OUTPUT = "./output/nsw_property_sales_archived_data.csv"
@@ -49,7 +57,7 @@ class propertyFileMetadata:
     filePath: str
 
 
-def property_file_searcher(root_dir: str, file_format: str) -> List[propertyFileMetadata]:
+def property_sales_file_searcher(root_dir: str, file_format: str) -> List[propertyFileMetadata]:
     property_metadata_list = []
     for dirpath, dirnames, filenames in os.walk(root_dir):
         for dirname in dirnames:
@@ -93,7 +101,7 @@ if __name__ == "__main__":
     jobs = []
 
     # 2.1. identify all the folders in the data file path
-    property_metadata_list = property_file_searcher(
+    property_metadata_list = property_sales_file_searcher(
         NSW_VALUE_GENERAL_FILE_PATH, DAT_FORMAT)
     for property_metadata in tqdm(property_metadata_list, desc=f'processing folders'):
         if property_metadata.year > 2000:

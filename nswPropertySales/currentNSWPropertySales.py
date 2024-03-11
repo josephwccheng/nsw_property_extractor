@@ -313,7 +313,13 @@ def read_nswvalue_dat_file(filename: str):
         header = rawResult.Header.get_record()
         addressSales = rawResult.AddressSales.get_record()
         description = rawResult.Description.get_record()
-        # owners = rawResult.Owner
+        unit_house_number = ""
+        if not addressSales.property_unit_number and not addressSales.property_house_number:
+            unit_house_number = "No Unit or Housing Number "
+        elif addressSales.property_house_number and not addressSales.property_unit_number:
+            unit_house_number = f'{addressSales.property_house_number} '
+        else:
+            unit_house_number = f'{addressSales.property_unit_number}/{addressSales.property_house_number} '
         data = Property_Data_Type(
             property_id=addressSales.property_id,
             download_date=datetime.strptime(
@@ -323,7 +329,7 @@ def read_nswvalue_dat_file(filename: str):
             contract_date=datetime.strptime(addressSales.contract_date, "%Y%m%d").isoformat(
             ).split("T")[0] if addressSales.contract_date != "" else addressSales.contract_date,
             purchase_price=addressSales.purchase_price,
-            address=f'{addressSales.property_unit_number + "/" + addressSales.property_house_number if addressSales.property_unit_number != "" else addressSales.property_house_number} {addressSales.property_street_name}, {addressSales.property_locality}',
+            address=f'{unit_house_number}{addressSales.property_street_name}, {addressSales.property_locality}',
             post_code=addressSales.property_post_code,
             property_type="unit" if addressSales.strata_lot_number != "" else "house",
             strata_lot_number=addressSales.strata_lot_number,
